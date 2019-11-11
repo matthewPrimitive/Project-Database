@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieProject", "MovieProject\MovieProject.csproj", "{3D7D12D8-CD78-4CE2-A8C0-F3BCF0E9BF6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D7D12D8-CD78-4CE2-A8C0-F3BCF0E9BF6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D7D12D8-CD78-4CE2-A8C0-F3BCF0E9BF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D7D12D8-CD78-4CE2-A8C0-F3BCF0E9BF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D7D12D8-CD78-4CE2-A8C0-F3BCF0E9BF6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B53CE87-BB36-43F1-A4E5-0F81ADD66B6F}
+	EndGlobalSection
+EndGlobal
