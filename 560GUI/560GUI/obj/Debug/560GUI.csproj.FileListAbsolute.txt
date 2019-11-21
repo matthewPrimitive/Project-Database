@@ -1,0 +1,10 @@
+C:\Users\Forbes3559\source\repos\560GUI\560GUI\obj\Debug\560GUI.csprojAssemblyReference.cache
+C:\Users\Forbes3559\source\repos\560GUI\560GUI\obj\Debug\_560GUI.Form1.resources
+C:\Users\Forbes3559\source\repos\560GUI\560GUI\obj\Debug\_560GUI.Properties.Resources.resources
+C:\Users\Forbes3559\source\repos\560GUI\560GUI\obj\Debug\560GUI.csproj.GenerateResource.cache
+C:\Users\Forbes3559\source\repos\560GUI\560GUI\obj\Debug\560GUI.csproj.CoreCompileInputs.cache
+C:\Users\Forbes3559\source\repos\560GUI\560GUI\bin\Debug\560GUI.exe.config
+C:\Users\Forbes3559\source\repos\560GUI\560GUI\bin\Debug\560GUI.exe
+C:\Users\Forbes3559\source\repos\560GUI\560GUI\bin\Debug\560GUI.pdb
+C:\Users\Forbes3559\source\repos\560GUI\560GUI\obj\Debug\560GUI.exe
+C:\Users\Forbes3559\source\repos\560GUI\560GUI\obj\Debug\560GUI.pdb
