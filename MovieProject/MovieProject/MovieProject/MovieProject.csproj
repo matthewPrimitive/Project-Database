@@ -45,12 +45,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataDelegates\ActorDelegates\FetchActorOnNameDataDelegate.cs" />
+    <Compile Include="DataDelegates\ActorDelegates\FetchActorDataDelegate.cs" />
+    <Compile Include="DataDelegates\MovieDelegates\RetrieveDirectorDataDelegate.cs" />
+    <Compile Include="DataDelegates\ReportQueryDelegates\BestTimeDataDelegate.cs" />
+    <Compile Include="DataDelegates\MovieDelegates\RetrieveGenreDataDelegate.cs" />
+    <Compile Include="DataDelegates\MovieDelegates\RetrieveMovieDataDelegate.cs" />
+    <Compile Include="DataDelegates\MovieDelegates\FetchMovieDataDelegate.cs" />
+    <Compile Include="DataDelegates\ReportQueryDelegates\HighestRatedActorsDataDelegate.cs" />
+    <Compile Include="DataDelegates\ReportQueryDelegates\MostViewedDataDelegate.cs" />
+    <Compile Include="DataDelegates\ReportQueryDelegates\RatingOverTimeDataDelegate.cs" />
+    <Compile Include="DataDelegates\ReviewDelegates\FetchViewerReviewsDataDelegate.cs" />
+    <Compile Include="DataDelegates\ReviewDelegates\RetrieveMovieReviewsDataDelegate.cs" />
+    <Compile Include="DataDelegates\ReviewDelegates\FetchMovieReviewsDataDelegate.cs" />
+    <Compile Include="DataDelegates\ReviewDelegates\FetchReviewDataDelegate.cs" />
+    <Compile Include="DataDelegates\ShowTimeDelegates\RetrieveDateShowTimeDataDelegate.cs" />
+    <Compile Include="DataDelegates\ShowTimeDelegates\RetrieveTimeShowTimeDataDelegate.cs" />
+    <Compile Include="DataDelegates\ShowTimeDelegates\RetrieveMovieShowTimeDataDelegate.cs" />
+    <Compile Include="DataDelegates\ShowTimeDelegates\FetchShowTimeDataDelegate.cs" />
+    <Compile Include="DataDelegates\TicketDelegates\RetrieveShowTimeTicketDataDelegate.cs" />
+    <Compile Include="DataDelegates\TicketDelegates\RetrieveViewerTicketDataDelegate.cs" />
+    <Compile Include="DataDelegates\TicketDelegates\FetchTicketDataDelegate.cs" />
+    <Compile Include="DataDelegates\ViewerDelegates\RetrieveViewerOnGender.cs" />
+    <Compile Include="DataDelegates\ViewerDelegates\RetrieveViewerOnNameDataDelegate.cs" />
+    <Compile Include="DataDelegates\ViewerDelegates\RetrieveViewerOnEmailDataDelegate.cs" />
+    <Compile Include="DataDelegates\ViewerDelegates\FetchViewerDataDelegate.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Actor.cs" />
+    <Compile Include="Models\MovieActor.cs" />
+    <Compile Include="Models\Ticket.cs" />
+    <Compile Include="Models\Review.cs" />
+    <Compile Include="Models\ShowTime.cs" />
+    <Compile Include="Models\Viewer.cs" />
+    <Compile Include="Models\Movie.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -40,7 +40,7 @@ CREATE TABLE Project.ShowTime
 		REFERENCES Project.Movie(MovieId),
 	[Time] TIME(0) NOT NULL,
 	[Date] DATE NOT NULL,
-	Price INT NOT NULL
+	Price DECIMAL(4,2) NOT NULL
 );
 
 CREATE TABLE Project.Review

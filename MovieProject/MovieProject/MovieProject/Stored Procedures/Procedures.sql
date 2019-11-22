@@ -223,7 +223,7 @@ FROM Project.Actor A
 WHERE A.ActorId = @ActorId;
 GO
 
-CREATE OR ALTER PROCEDURE Project.FetchActor
+CREATE OR ALTER PROCEDURE Project.FetchActorOnName
 	@Name NVARCHAR(128)
 AS
 SELECT A.ActorId, A.[Name]
