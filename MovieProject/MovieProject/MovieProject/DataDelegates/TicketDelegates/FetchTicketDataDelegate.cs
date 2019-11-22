@@ -14,7 +14,7 @@ namespace MovieProject.DataDelegates.TicketDelegates
         private readonly int ticketId;
 
         public FetchTicketDataDelegate(int ticketId)
-            : base("Movie.FetchTicket")
+            : base("Project.FetchTicket")
         {
             this.ticketId = ticketId;
         }

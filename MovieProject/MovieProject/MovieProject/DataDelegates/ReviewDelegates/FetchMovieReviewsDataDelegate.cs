@@ -14,7 +14,7 @@ namespace MovieProject.DataDelegates.ReviewDelegates
         private readonly int movieId;
 
         public FetchMovieReviewsDataDelegate(int movieId)
-            : base("Movie.FetchMovieReviews")
+            : base("Project.FetchMovieReviews")
         {
             this.movieId = movieId;
         }

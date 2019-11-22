@@ -14,7 +14,7 @@ namespace MovieProject.DataDelegates
         private readonly string genre;
 
         public RetrieveGenreDataDelegate(string genre)
-            : base("Movie.RetrieveGenre")
+            : base("Project.RetrieveGenre")
         {
             this.genre = genre;
         }

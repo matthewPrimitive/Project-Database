@@ -14,7 +14,7 @@ namespace MovieProject.DataDelegates.ShowTimeDelegates
         private readonly int showtimeId;
 
         public FetchShowTimeDataDelegate(int showtimeId)
-            : base("Movie.FetchShowTime")
+            : base("Project.FetchShowTime")
         {
             this.showtimeId = showtimeId;
         }

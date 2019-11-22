@@ -66,7 +66,7 @@
     <Compile Include="DataDelegates\TicketDelegates\RetrieveShowTimeTicketDataDelegate.cs" />
     <Compile Include="DataDelegates\TicketDelegates\RetrieveViewerTicketDataDelegate.cs" />
     <Compile Include="DataDelegates\TicketDelegates\FetchTicketDataDelegate.cs" />
-    <Compile Include="DataDelegates\ViewerDelegates\RetrieveViewerOnGender.cs" />
+    <Compile Include="DataDelegates\ViewerDelegates\RetrieveViewerOnGenderDataDelegate.cs" />
     <Compile Include="DataDelegates\ViewerDelegates\RetrieveViewerOnNameDataDelegate.cs" />
     <Compile Include="DataDelegates\ViewerDelegates\RetrieveViewerOnEmailDataDelegate.cs" />
     <Compile Include="DataDelegates\ViewerDelegates\FetchViewerDataDelegate.cs" />
@@ -77,6 +77,10 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Actor.cs" />
+    <Compile Include="Models\Report4Object.cs" />
+    <Compile Include="Models\Report3Object.cs" />
+    <Compile Include="Models\Report2Object.cs" />
+    <Compile Include="Models\Report1Object.cs" />
     <Compile Include="Models\MovieActor.cs" />
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Models\Review.cs" />
@@ -94,6 +98,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\MovieProject.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\MovieProject.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\MovieProject.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\MovieProject.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\MovieProject.csprojAssemblyReference.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -124,6 +135,46 @@
       <Project>{A5AC459D-6C0A-4D6E-AD65-ECB3E0FEC3A7}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Create Table and Data SQL\CreateSchema.sql" />
+    <Content Include="Create Table and Data SQL\CreateTables.sql" />
+    <Content Include="Create Table and Data SQL\InsertActors.sql" />
+    <Content Include="Create Table and Data SQL\InsertAllInfo.sql" />
+    <Content Include="Create Table and Data SQL\InsertMovieActors.sql" />
+    <Content Include="Create Table and Data SQL\InsertMovies.sql" />
+    <Content Include="Create Table and Data SQL\InsertShowTimes.sql" />
+    <Content Include="Create Table and Data SQL\InsertViewers.sql" />
+    <Content Include="Stored Procedures\Procedures.sql" />
+    <Content Include="Stored Procedures\Project.BestTime.sql" />
+    <Content Include="Stored Procedures\Project.FetchActor.sql" />
+    <Content Include="Stored Procedures\Project.FetchActorOnName.sql" />
+    <Content Include="Stored Procedures\Project.FetchMovie.sql" />
+    <Content Include="Stored Procedures\Project.FetchMovieReviews.sql" />
+    <Content Include="Stored Procedures\Project.FetchReview.sql" />
+    <Content Include="Stored Procedures\Project.FetchShowTime.sql" />
+    <Content Include="Stored Procedures\Project.FetchTicket.sql" />
+    <Content Include="Stored Procedures\Project.FetchViewer.sql" />
+    <Content Include="Stored Procedures\Project.FetchViewerReviews.sql" />
+    <Content Include="Stored Procedures\Project.HighestRatedActors.sql" />
+    <Content Include="Stored Procedures\Project.MostViewed.sql" />
+    <Content Include="Stored Procedures\Project.RatingOverTime.sql" />
+    <Content Include="Stored Procedures\Project.RetrieveDateShowTime.sql" />
+    <Content Include="Stored Procedures\Project.RetrieveDirector.sql" />
+    <Content Include="Stored Procedures\Project.RetrieveGenre.sql" />
+    <Content Include="Stored Procedures\Project.RetrieveMovie.sql" />
+    <Content Include="Stored Procedures\Project.RetrieveMovieShowTime.sql" />
+    <Content Include="Stored Procedures\Project.RetrieveShowTimeTicket.sql" />
+    <Content Include="Stored Procedures\Project.RetrieveTimeShowTime.sql" />
+    <Content Include="Stored Procedures\Project.RetrieveViewerOnEmail.sql" />
+    <Content Include="Stored Procedures\Project.RetrieveViewerOnGender.sql" />
+    <Content Include="Stored Procedures\Project.RetrieveViewerOnName.sql" />
+    <Content Include="Stored Procedures\Project.RetrieveViewerTicket.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

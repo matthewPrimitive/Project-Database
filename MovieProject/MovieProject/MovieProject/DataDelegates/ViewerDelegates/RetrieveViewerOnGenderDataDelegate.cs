@@ -9,31 +9,31 @@ using System.Data.SqlClient;
 
 namespace MovieProject.DataDelegates.ViewerDelegates
 {
-    public class RetrieveViewerOnNameDataDelegate : DataReaderDelegate<Viewer>
+    public class RetrieveViewerOnGenderDataDelegate : DataReaderDelegate<Viewer>
     {
-        private readonly string name;
+        private readonly string gender;
 
-        public RetrieveViewerOnNameDataDelegate(string name)
-            : base("Project.RetrieveViewerOnName")
+        public RetrieveViewerOnGenderDataDelegate(string gender)
+            : base("Project.RetrieveViewerOnGender")
         {
-            this.name = name;
+            this.gender = gender;
         }
 
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
 
-            command.Parameters.AddWithValue("Name", name);
+            command.Parameters.AddWithValue("Gender", gender);
         }
 
         public override Viewer Translate(SqlCommand command, IDataRowReader reader)
         {
             if (!reader.Read())
-                throw new RecordNotFoundException(name.ToString());
+                throw new RecordNotFoundException(gender.ToString());
 
             return new Viewer(reader.GetInt32("ViewerId"),
-                reader.GetString("Gender"),
-                name,
+                gender,
+                reader.GetString("Name"),
                 reader.GetString("Email"),
                 reader.GetString("BirthDate"),
                 reader.GetString("Username"));

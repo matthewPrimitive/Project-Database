@@ -14,7 +14,7 @@ namespace MovieProject.DataDelegates.ReviewDelegates
         private readonly string name;
 
         public RetrieveMovieReviewsDataDelegate(string name)
-            : base("Movie.RetrieveMovieReviews")
+            : base("Project.RetrieveMovieReviews")
         {
             this.name = name;
         }

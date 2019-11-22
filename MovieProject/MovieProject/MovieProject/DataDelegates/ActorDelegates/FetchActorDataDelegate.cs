@@ -14,7 +14,7 @@ namespace MovieProject.DataDelegates.ActorDelegates
         private readonly int actorId;
 
         public FetchActorDataDelegate(int actorId)
-            : base("Movie.FetchActor")
+            : base("Project.FetchActor")
         {
             this.actorId = actorId;
         }

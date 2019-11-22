@@ -14,7 +14,7 @@ namespace MovieProject.DataDelegates.ShowTimeDelegates
         private readonly string time;
 
         public RetrieveTimeShowTimeDataDelegate(string time)
-            : base("Movie.RetrieveTimeShowTime")
+            : base("Project.RetrieveTimeShowTime")
         {
             this.time = time;
         }

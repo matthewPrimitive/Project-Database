@@ -15,7 +15,7 @@ namespace MovieProject.DataDelegates.MovieDelegates
         private readonly string director;
 
         public RetrieveDirectorDataDelegate(string director)
-            : base("Movie.RetrieveDirector")
+            : base("Project.RetrieveDirector")
         {
             this.director = director;
         }

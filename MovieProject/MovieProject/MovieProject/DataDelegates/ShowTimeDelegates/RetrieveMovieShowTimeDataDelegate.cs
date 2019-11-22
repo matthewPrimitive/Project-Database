@@ -14,7 +14,7 @@ namespace MovieProject.DataDelegates.ShowTimeDelegates
         private readonly int movieId;
 
         public RetrieveMovieShowTimeDataDelegate(int movieId)
-            : base("Movie.RetrieveMovieShowTime")
+            : base("Project.RetrieveMovieShowTime")
         {
             this.movieId = movieId;
         }

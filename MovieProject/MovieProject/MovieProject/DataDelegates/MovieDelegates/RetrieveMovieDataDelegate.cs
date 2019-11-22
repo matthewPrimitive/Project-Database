@@ -15,7 +15,7 @@ namespace MovieProject.DataDelegates
         private readonly string moviename;
 
         public RetrieveMovieDataDelegate(string moviename)
-            : base("Movie.RetrieveMovie")
+            : base("Project.RetrieveMovie")
         {
             this.moviename = moviename;
         }
