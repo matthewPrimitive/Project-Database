@@ -5,6 +5,8 @@ namespace DataAccess
    public interface IDataRowReader
    {
       bool Read();
+        decimal GetDecimal(string name);
+        decimal GetDecimal(string name, int defaultValue);
       byte GetByte(string name);
       byte GetByte(string name, byte defaultValue);
       DateTimeOffset GetDateTimeOffset(string name);

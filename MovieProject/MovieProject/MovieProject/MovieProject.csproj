@@ -94,6 +94,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\MovieProject.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\MovieProject.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\MovieProject.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\MovieProject.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\MovieProject.csprojAssemblyReference.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,6 +113,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataAccess\DataAccess.csproj">
+      <Project>{a5ac459d-6c0a-4d6e-ad65-ecb3e0fec3a7}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Create Table and Data SQL\CreateSchema.sql" />
+    <Content Include="Create Table and Data SQL\CreateTables.sql" />
+    <Content Include="Create Table and Data SQL\InsertActors.sql" />
+    <Content Include="Create Table and Data SQL\InsertAllInfo.sql" />
+    <Content Include="Create Table and Data SQL\InsertMovieActors.sql" />
+    <Content Include="Create Table and Data SQL\InsertMovies.sql" />
+    <Content Include="Create Table and Data SQL\InsertShowTimes.sql" />
+    <Content Include="Create Table and Data SQL\InsertViewers.sql" />
+    <Content Include="Stored Procedures\Procedures.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
