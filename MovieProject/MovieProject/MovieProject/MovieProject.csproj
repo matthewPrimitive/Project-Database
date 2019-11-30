@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="DataDelegates\ActorDelegates\FetchActorOnNameDataDelegate.cs" />
     <Compile Include="DataDelegates\ActorDelegates\FetchActorDataDelegate.cs" />
+    <Compile Include="DataDelegates\MovieDelegates\RetrieveMoviesDataDelegate.cs" />
     <Compile Include="DataDelegates\MovieDelegates\RetrieveDirectorDataDelegate.cs" />
     <Compile Include="DataDelegates\ReportQueryDelegates\BestTimeDataDelegate.cs" />
     <Compile Include="DataDelegates\MovieDelegates\RetrieveGenreDataDelegate.cs" />
