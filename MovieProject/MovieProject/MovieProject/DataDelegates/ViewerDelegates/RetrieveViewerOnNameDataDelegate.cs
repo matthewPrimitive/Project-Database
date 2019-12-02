@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace MovieProject.DataDelegates.ViewerDelegates
 {
-    public class RetrieveViewerOnNameDataDelegate : DataReaderDelegate<Viewer>
+    public class RetrieveViewerOnNameDataDelegate : DataReaderDelegate<IReadOnlyList<Viewer>>
     {
         private readonly string name;
 
@@ -26,17 +26,21 @@ namespace MovieProject.DataDelegates.ViewerDelegates
             command.Parameters.AddWithValue("Name", name);
         }
 
-        public override Viewer Translate(SqlCommand command, IDataRowReader reader)
+        public override IReadOnlyList<Viewer> Translate(SqlCommand command, IDataRowReader reader)
         {
-            if (!reader.Read())
-                throw new RecordNotFoundException(name.ToString());
+            var viewers = new List<Viewer>();
 
-            return new Viewer(reader.GetInt32("ViewerId"),
-                reader.GetString("Gender"),
-                name,
-                reader.GetString("Email"),
-                reader.GetString("BirthDate"),
-                reader.GetString("Username"));
+            while (reader.Read())
+            {
+                viewers.Add(new Viewer(
+                    reader.GetInt32("ViewerId"),
+                    reader.GetString("Gender"),
+                    name,
+                    reader.GetString("Email"),
+                    reader.GetString("BirthDate"),
+                    reader.GetString("Username")));
+            }
+            return viewers;
         }
     }
 }

@@ -21,6 +21,14 @@ namespace MovieProject.DataDelegates
             enddate = end;
         }
 
+        public override void PrepareCommand(SqlCommand command)
+        {
+            base.PrepareCommand(command);
+
+            command.Parameters.AddWithValue("StartDate", startdate);
+            command.Parameters.AddWithValue("EndDate", enddate);
+        }
+
         public override IReadOnlyList<Report1Object> Translate(SqlCommand command, IDataRowReader reader)
         {
             var movies = new List<Report1Object>();

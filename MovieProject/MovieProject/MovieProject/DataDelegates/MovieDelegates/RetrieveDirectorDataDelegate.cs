@@ -20,6 +20,13 @@ namespace MovieProject.DataDelegates.MovieDelegates
             this.director = director;
         }
 
+        public override void PrepareCommand(SqlCommand command)
+        {
+            base.PrepareCommand(command);
+
+            command.Parameters.AddWithValue("Director", director);
+        }
+
         public override IReadOnlyList<Movie> Translate(SqlCommand command, IDataRowReader reader)
         {
             var movies = new List<Movie>();

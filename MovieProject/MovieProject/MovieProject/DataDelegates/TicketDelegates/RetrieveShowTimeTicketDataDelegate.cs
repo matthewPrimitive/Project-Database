@@ -19,6 +19,13 @@ namespace MovieProject.DataDelegates.TicketDelegates
             this.showtimeId = showtimeId;
         }
 
+        public override void PrepareCommand(SqlCommand command)
+        {
+            base.PrepareCommand(command);
+
+            command.Parameters.AddWithValue("ShowTimeId", showtimeId);
+        }
+
         public override IReadOnlyList<Ticket> Translate(SqlCommand command, IDataRowReader reader)
         {
             var tickets = new List<Ticket>();

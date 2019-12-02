@@ -19,6 +19,13 @@ namespace MovieProject.DataDelegates.ShowTimeDelegates
             this.time = time;
         }
 
+        public override void PrepareCommand(SqlCommand command)
+        {
+            base.PrepareCommand(command);
+
+            command.Parameters.AddWithValue("Time", time);
+        }
+
         public override IReadOnlyList<ShowTime> Translate(SqlCommand command, IDataRowReader reader)
         {
             var showtimes = new List<ShowTime>();

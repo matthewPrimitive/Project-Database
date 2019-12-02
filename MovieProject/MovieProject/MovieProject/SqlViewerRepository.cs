@@ -36,13 +36,13 @@ namespace MovieProject
             return executor.ExecuteReader(d);
         }
 
-        public Viewer RetrieveViewerOnName(string name)
+        public IReadOnlyList<Viewer> RetrieveViewerOnName(string name)
         {
             var d = new RetrieveViewerOnNameDataDelegate(name);
             return executor.ExecuteReader(d);
         }
 
-        public Viewer RetrieveViewerOnGender(string gender)
+        public IReadOnlyList<Viewer> RetrieveViewerOnGender(string gender)
         {
             var d = new RetrieveViewerOnGenderDataDelegate(gender);
             return executor.ExecuteReader(d);

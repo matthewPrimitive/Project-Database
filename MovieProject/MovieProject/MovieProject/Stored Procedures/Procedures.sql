@@ -244,7 +244,7 @@ WHERE S.MovieId = @MovieId;
 GO
 
 CREATE OR ALTER PROCEDURE Project.RetrieveTimeShowTime
-	@Time TIME
+	@Time NVARCHAR
 AS
 SELECT S.ShowTimeId, S.MovieId, S.[Time], S.[Date], S.Price
 FROM Project.ShowTime S
@@ -252,7 +252,7 @@ WHERE S.[Time] = @Time;
 GO
 
 CREATE OR ALTER PROCEDURE Project.RetrieveDateShowTime
-	@Date DATE
+	@Date NVARCHAR
 AS
 SELECT S.ShowTimeId, S.MovieId, S.[Time], S.[Date], S.Price
 FROM Project.ShowTime S

@@ -19,6 +19,13 @@ namespace MovieProject.DataDelegates
             this.genre = genre;
         }
 
+        public override void PrepareCommand(SqlCommand command)
+        {
+            base.PrepareCommand(command);
+
+            command.Parameters.AddWithValue("Genre", genre);
+        }
+
         public override IReadOnlyList<Movie> Translate(SqlCommand command, IDataRowReader reader)
         {
             var movies = new List<Movie>();

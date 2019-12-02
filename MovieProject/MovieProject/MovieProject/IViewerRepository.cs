@@ -42,7 +42,7 @@ namespace MovieProject
         /// if one exists with with the provided <paramref name="time"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        Viewer RetrieveViewerOnName(string name);
+        IReadOnlyList<Viewer> RetrieveViewerOnName(string name);
 
         /// <summary>
         /// Gets the movie with the given <paramref name="date"/> if it exists.
@@ -53,7 +53,7 @@ namespace MovieProject
         /// if one exists with with the provided <paramref name="date"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        Viewer RetrieveViewerOnGender(string gender);
+        IReadOnlyList<Viewer> RetrieveViewerOnGender(string gender);
 
         /// <summary>
         /// Creates a new person in the repository.
