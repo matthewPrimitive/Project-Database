@@ -33,6 +33,7 @@ CREATE TABLE Project.Viewer
 	Username NVARCHAR(32) NOT NULL
 );
 
+
 CREATE TABLE Project.ShowTime
 (
 	ShowTimeId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
