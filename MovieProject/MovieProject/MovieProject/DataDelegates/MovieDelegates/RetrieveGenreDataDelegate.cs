@@ -28,7 +28,7 @@ namespace MovieProject.DataDelegates
                 movies.Add(new Movie(
                     reader.GetInt32("MovieId"),
                     reader.GetString("Name"),
-                    reader.GetString("Movie"),
+                    reader.GetString("Genre"),
                     reader.GetDecimal("Rating"),
                     reader.GetString("Director")));
             }

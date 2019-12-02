@@ -23,7 +23,14 @@ namespace DataAccess
 
         public decimal GetDecimal(string name)
         {
-            return GetValue(name, reader.GetDecimal);
+            try
+            {
+                return GetValue(name, reader.GetDecimal);
+            }
+            catch
+            {
+                return GetValue(name, 0);
+            }
         }
 
         public decimal GetDecimal(string name, int defaultValue)
@@ -110,6 +117,7 @@ namespace DataAccess
 
       private T GetValue<T>(string name, Func<int, T> getter)
       {
+         
          return getter(GetOrdinal(name));
       }
 

@@ -43,13 +43,11 @@ namespace _560GUI
             viewerRepo = new SqlViewerRepository(connectionString);
 
             //db test
-            Movie testmovie = movieRepo.FetchMovie(1);
-            dropList.Items.Add(testmovie.Name);
-
-            // dumby data to ensure its making the moves
-            dropList.Items.Add("Movie 1");
-            dropList.Items.Add("Movie 2");
-            dropList.Items.Add("Movie 3");
+            IReadOnlyList<Movie> m = movieRepo.RetrieveMovies();
+            foreach (Movie movie in m)
+            {
+                dropList.Items.Add(movie.Name);
+            }
 
             showtimeDropbox.Items.Add("Time 1");
             showtimeDropbox.Items.Add("Time 2");
@@ -62,10 +60,16 @@ namespace _560GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            IReadOnlyList<Movie> m = movieRepo.RetrieveMovies();
+            foreach(Movie movie in m)
+            {
+                movieListbox.Items.Add(movie.Name);
+            }
+            //IReadOnlyList<Movie> m = movieRepo.RetrieveMovies();
+            
+
+
             //populate listView
-            movieListbox.Items.Add("Movie 1");
-            movieListbox.Items.Add("Movie 2");
-            movieListbox.Items.Add("Movie 3");
 
         }
 
@@ -137,10 +141,25 @@ namespace _560GUI
             //whatever movie is selected will print out the showtimes in the other listbox
             int i = 0;
             int index = movieListbox.SelectedIndex;
-            while(i < 0)
+            string movieName = movieListbox.SelectedItem.ToString();
+            IReadOnlyList<Movie> m = movieRepo.RetrieveMovies();
+            Movie selectedMovie;
+            foreach(Movie movie in m)
             {
-                //showtimeListBox.Items.Add(movieListbox.)
+                if (movie.Name.Equals(movieName))
+                {
+                    selectedMovie = movie;
+                }
             }
+            /*
+            IReadOnlyList<ShowTime> showtimes= showtimeRepo.re(1);
+
+            //showtimerepo.retrievemovieshowtime
+            while (i < 0)
+            {
+                showtimeListBox.Items.Add(selectedMovie.);
+            }
+            */
         }
 
         public string getCurrentUserLabel()

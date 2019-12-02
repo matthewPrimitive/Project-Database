@@ -44,3 +44,24 @@ U:\560 project\560GUI\560GUI\bin\Debug\DataAccess.pdb
 U:\560 project\560GUI\560GUI\bin\Debug\MovieProject.pdb
 U:\560 project\560GUI\560GUI\bin\Debug\MovieProject.exe.config
 U:\560 project\560GUI\560GUI\obj\Debug\560GUI.csproj.CopyComplete
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\bin\Debug\560GUI.exe.config
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\bin\Debug\560GUI.exe
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\bin\Debug\560GUI.pdb
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\bin\Debug\DataAccess.dll
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\bin\Debug\MovieProject.exe
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\bin\Debug\DataAccess.pdb
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\bin\Debug\MovieProject.pdb
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\bin\Debug\MovieProject.exe.config
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI.csprojAssemblyReference.cache
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.createAccount.resources
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.Form1.resources
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.Reviews.resources
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.MovieList.resources
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.loginForm.resources
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.Properties.Resources.resources
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.writeReview.resources
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI.csproj.GenerateResource.cache
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI.csproj.CoreCompileInputs.cache
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI.csproj.CopyComplete
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI.exe
+C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI.pdb
