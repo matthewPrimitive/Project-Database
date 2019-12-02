@@ -117,8 +117,8 @@
             this.Controls.Add(this.uxEndDatePicker);
             this.Controls.Add(this.uxStartLabel);
             this.Controls.Add(this.uxStartDatePicker);
-            this.Name = "MostViewedMovieForm";
-            this.Text = "MostViewedMovieForm";
+            //this.Name = "MostViewedMovieForm";
+            //this.Text = "MostViewedMovieForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

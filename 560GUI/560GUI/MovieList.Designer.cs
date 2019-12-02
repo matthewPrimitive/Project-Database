@@ -51,6 +51,7 @@
             this.castButton.TabIndex = 2;
             this.castButton.Text = "Search Cast";
             this.castButton.UseVisualStyleBackColor = true;
+            this.castButton.Click += new System.EventHandler(this.castButton_Click);
             // 
             // reviewButton
             // 

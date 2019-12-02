@@ -26,5 +26,10 @@ namespace MovieProject.Models
             ReviewMessage = reviewmessage;
             Rating = rating;
         }
+
+        public string ToString()
+        {
+            return "\nUser: " + ViewerId + "    \nReview: " + ReviewMessage + "     \nRating: " + Rating;
+        }
     }
 }

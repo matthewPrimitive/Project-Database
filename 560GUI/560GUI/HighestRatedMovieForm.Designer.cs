@@ -117,7 +117,7 @@
             this.Controls.Add(this.uxStartLabel);
             this.Controls.Add(this.uxStartDatePicker);
             this.Controls.Add(this.uxHighestRatedMovie);
-            this.Name = "HighestRatedMovieForm";
+            //this.Name = "HighestRatedMovieForm";
             this.Text = "Highest Rated Movies";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -62,7 +62,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(325, 285);
             this.Controls.Add(this.uxActorList);
-            this.Name = "HighestRatedActorForm";
+            //this.Name = "HighestRatedActorForm";
             this.Text = "HighestRatedActorForm";
             this.ResumeLayout(false);
 
