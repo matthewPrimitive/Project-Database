@@ -123,8 +123,13 @@ namespace _560GUI
         private void buyButton_Click(object sender, EventArgs e)
         {
             
-            if(movieListbox.SelectedItem != null)
+            if(movieListbox.SelectedItem != null && showtimeListBox != null)
             {
+                string movie = movieListbox.SelectedItem.ToString();
+                string full = showtimeListBox.SelectedItem.ToString();
+                string time = 
+
+
                 string ticketMessage = "Ticket for " + movieListbox.SelectedItem.ToString() + " purchased!\n Thank you for your order!";
 
                 MessageBox.Show(ticketMessage);
@@ -157,10 +162,10 @@ namespace _560GUI
             IReadOnlyList<ShowTime> showtimes= showtimeRepo.RetrieveMovieShowTime(selectedMovie.MovieId);
 
             //showtimerepo.retrievemovieshowtime
-            while (i < 3)
+            foreach(ShowTime sh in showtimes)
             {
-                showtimeListBox.Items.Add(showtimes[i]);
-                i++;
+                showtimeListBox.Items.Add(sh);
+                
             }
             
         }

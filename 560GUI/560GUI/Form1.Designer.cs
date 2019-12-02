@@ -43,6 +43,9 @@
             this.buyButton = new System.Windows.Forms.Button();
             this.showtimeListBox = new System.Windows.Forms.ListBox();
             this.movieListbox = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,7 +92,7 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(725, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(766, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -155,7 +158,7 @@
             // buyButton
             // 
             this.buyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buyButton.Location = new System.Drawing.Point(503, 310);
+            this.buyButton.Location = new System.Drawing.Point(312, 361);
             this.buyButton.Name = "buyButton";
             this.buyButton.Size = new System.Drawing.Size(193, 48);
             this.buyButton.TabIndex = 9;
@@ -166,9 +169,9 @@
             // showtimeListBox
             // 
             this.showtimeListBox.FormattingEnabled = true;
-            this.showtimeListBox.Location = new System.Drawing.Point(503, 195);
+            this.showtimeListBox.Location = new System.Drawing.Point(464, 195);
             this.showtimeListBox.Name = "showtimeListBox";
-            this.showtimeListBox.Size = new System.Drawing.Size(199, 95);
+            this.showtimeListBox.Size = new System.Drawing.Size(290, 160);
             this.showtimeListBox.TabIndex = 11;
             // 
             // movieListbox
@@ -176,15 +179,45 @@
             this.movieListbox.FormattingEnabled = true;
             this.movieListbox.Location = new System.Drawing.Point(35, 195);
             this.movieListbox.Name = "movieListbox";
-            this.movieListbox.Size = new System.Drawing.Size(444, 160);
+            this.movieListbox.Size = new System.Drawing.Size(414, 160);
             this.movieListbox.TabIndex = 12;
             this.movieListbox.SelectedIndexChanged += new System.EventHandler(this.movieListbox_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(464, 176);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Time";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(548, 176);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Date";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(635, 176);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Price";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 383);
+            this.ClientSize = new System.Drawing.Size(766, 412);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.movieListbox);
             this.Controls.Add(this.showtimeListBox);
             this.Controls.Add(this.buyButton);
@@ -223,6 +256,9 @@
         private System.Windows.Forms.Button buyButton;
         private System.Windows.Forms.ListBox showtimeListBox;
         private System.Windows.Forms.ListBox movieListbox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

@@ -29,7 +29,7 @@ namespace MovieProject.Models
 
         public override string ToString()
         {
-            return Time.ToString() + " " + Date.ToString() + " " + Price.ToString();
+            return Time.ToString() + "              " + Date.ToString() + "             $" + Price.ToString();
         }
     }
 }
