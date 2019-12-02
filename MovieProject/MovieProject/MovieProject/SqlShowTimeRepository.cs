@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using DataAccess;
 using MovieProject.Models;
 using MovieProject.DataDelegates.ShowTimeDelegates;
@@ -11,6 +15,12 @@ namespace MovieProject
         public SqlShowTimeRepository(string connectionString)
         {
             executor = new SqlCommandExecutor(connectionString);
+        }
+
+        public IReadOnlyList<ShowTime> FetchShowTime()
+        {
+            var d = new FetchShowTimesDataDelegate();
+            return executor.ExecuteReader(d);
         }
 
         public ShowTime FetchShowTime(int showTimeId)
@@ -27,13 +37,13 @@ namespace MovieProject
 
         public ShowTime RetrieveTimeShowTime(string time)
         {
-            var d = new RetrieveMovieShowTimeDataDelegate(time);
+            var d = new RetrieveTimeShowTimeDataDelegate(time);
             return executor.ExecuteReader(d);
         }
 
         public ShowTime RetrieveDateShowTime(string date)
         {
-            var d = new RetrieveMovieShowTimeDataDelegate(date);
+            var d = new RetrieveDateShowTimeDataDelegate(date);
             return executor.ExecuteReader(d);
         }
     }

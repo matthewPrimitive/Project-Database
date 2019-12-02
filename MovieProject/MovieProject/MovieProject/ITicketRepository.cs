@@ -1,15 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MovieProject.Models;
+
 namespace MovieProject
 {
     public interface ITicketRepository
     {
-        /// <summary>
-        /// Retrieves all ShowTimes in the database.
-        /// </summary>
-        /// <returns>
-        /// <see cref="IReadOnlyList{Ticket}"/> containing all showtimes.
-        /// </returns>
-        IReadOnlyList<Ticket> FetchTicket();
 
         /// <summary>
         /// Fetches the movie with the given <paramref name="viewerId"/> if it exists.
@@ -32,7 +31,7 @@ namespace MovieProject
         /// if one exists with with the provided <paramref name="movieId"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        Ticket RetrieveViewerTicket(int viewerId);
+        IReadOnlyList<Ticket> RetrieveViewerTicket(int viewerId);
 
         /// <summary>
         /// Gets the movie with the given <paramref name="showTimeId"/> if it exists.
@@ -43,6 +42,6 @@ namespace MovieProject
         /// if one exists with with the provided <paramref name="time"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        Ticket RetrieveShowTimeTicket(int showTimeId);
+        IReadOnlyList<Ticket> RetrieveShowTimeTicket(int showTimeId);
     }
 }

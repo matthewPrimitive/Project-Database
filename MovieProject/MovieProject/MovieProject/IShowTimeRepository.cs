@@ -1,4 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MovieProject.Models;
+using MovieProject.DataDelegates;
+
 namespace MovieProject
 {
     public interface IShowTimeRepository

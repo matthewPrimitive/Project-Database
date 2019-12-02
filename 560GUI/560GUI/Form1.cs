@@ -7,11 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MovieProject;
+using DataAccess;
 
 namespace _560GUI
 {
     public partial class Form1 : Form
     {
+        const string connectionString = "Server=mssql.cs.ksu.edu;Database=tholt15;User Id=tholt15;Password=TJholt1544";
+
+        private IActorRepository actorRepo;
+        private IMovieRepository movieRepo;
+        private IReviewRepository reviewRepo;
+        private IShowTimeRepository showtimeRepo;
+        private ITicketRepository ticketRepo;
+        private IViewerRepository viewerRepo;
+
         public currentUser theUser { get; set; }
 
         public currentUser getCurrentUser()
@@ -22,6 +33,15 @@ namespace _560GUI
         public Form1()
         {
             InitializeComponent();
+            // setup repos
+            actorRepo = new SqlActorRepository(connectionString);
+            movieRepo = new SqlMovieRepository(connectionString);
+            reviewRepo = new SqlReviewRepository(connectionString);
+            showtimeRepo = new SqlShowTimeRepository(connectionString);
+            ticketRepo = new SqlTicketRepository(connectionString);
+            viewerRepo = new SqlViewerRepository(connectionString);
+
+
             // dumby data to ensure its making the moves
             dropList.Items.Add("Movie 1");
             dropList.Items.Add("Movie 2");

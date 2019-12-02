@@ -1,7 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using DataAccess;
 using MovieProject.Models;
 using MovieProject.DataDelegates.TicketDelegates;
+
+
 namespace MovieProject
 {
     public class SqlTicketRepository : ITicketRepository
@@ -19,13 +25,13 @@ namespace MovieProject
             return executor.ExecuteReader(d);
         }
 
-        public Ticket RetrieveViewerTicket(int viewerId)
+        public IReadOnlyList<Ticket> RetrieveViewerTicket(int viewerId)
         {
             var d = new RetrieveViewerTicketDataDelegate(viewerId);
             return executor.ExecuteReader(d);
         }
 
-        public Ticket RetrieveShowTimeTicket(int showTimeId)
+        public IReadOnlyList<Ticket> RetrieveShowTimeTicket(int showTimeId)
         {
             var d = new RetrieveShowTimeTicketDataDelegate(showTimeId);
             return executor.ExecuteReader(d);

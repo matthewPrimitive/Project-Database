@@ -1,15 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MovieProject.Models;
+
 namespace MovieProject
 {
     public interface IViewerRepository
     {
-        /// <summary>
-        /// Retrieves all ShowTimes in the database.
-        /// </summary>
-        /// <returns>
-        /// <see cref="IReadOnlyList{Viewer}"/> containing all showtimes.
-        /// </returns>
-        IReadOnlyList<ShowTime> FetchViewer();
 
         /// <summary>
         /// Fetches the movie with the given <paramref name="viewerId"/> if it exists.
@@ -21,7 +20,7 @@ namespace MovieProject
         /// <exception cref="DataAccess.RecordNotFoundException">
         /// Thrown if <paramref name="viewerId"/> does not exist.
         /// </exception>
-        Viewer FetchVierer(int viewerId);
+        Viewer FetchViewer(int viewerId);
 
         /// <summary>
         /// Gets the movie with the given <paramref name="movieId"/> if it exists.

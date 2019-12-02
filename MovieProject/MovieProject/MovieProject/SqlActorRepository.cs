@@ -6,6 +6,8 @@ namespace MovieProject
 {
     public class SqlActorRepository : IActorRepository
     {
+        private readonly SqlCommandExecutor executor;
+
         public SqlActorRepository(string connectionString)
         {
             executor = new SqlCommandExecutor(connectionString);

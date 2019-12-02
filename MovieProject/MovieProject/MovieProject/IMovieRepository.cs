@@ -1,4 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DataAccess;
+using MovieProject.Models;
+
 
 namespace MovieProject
 {
@@ -33,7 +40,7 @@ namespace MovieProject
         /// if one exists with with the provided <paramref name="name"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        Movie RetrieveMovie(string name);
+        IReadOnlyList<Movie> RetrieveMovie(string name);
 
         /// <summary>
         /// Gets the movie with the given <paramref name="movieId"/> if it exists.
@@ -44,7 +51,7 @@ namespace MovieProject
         /// if one exists with with the provided <paramref name="genre"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        Movie RetrieveGenre(string genre);
+        IReadOnlyList<Movie> RetrieveGenre(string genre);
 
         /// <summary>
         /// Gets the movie with the given <paramref name="movieId"/> if it exists.
@@ -55,7 +62,7 @@ namespace MovieProject
         /// if one exists with with the provided <paramref name="rating"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        Movie RetrieveRating(string rating);
+        //IReadOnlyList<Movie> RetrieveRating(string rating);
 
         /// <summary>
         /// Gets the movie with the given <paramref name="movieId"/> if it exists.
@@ -66,6 +73,6 @@ namespace MovieProject
         /// if one exists with with the provided <paramref name="director"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        Movie RetrieveDirector(string director);
+        IReadOnlyList<Movie> RetrieveDirector(string director);
     }
 }

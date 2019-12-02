@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DataAccess;
+using MovieProject.Models;
+
+
 namespace MovieProject
 {
     public interface IActorRepository
     {
-        /// <summary>
-        /// Retrieves all ShowTimes in the database.
-        /// </summary>
-        /// <returns>
-        /// <see cref="IReadOnlyList{Actor}"/> containing all showtimes.
-        /// </returns>
-        IReadOnlyList<Actor> FetchActor();
 
         /// <summary>
         /// Fetches the movie with the given <paramref name="viewerId"/> if it exists.

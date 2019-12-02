@@ -1,4 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DataAccess;
+using MovieProject.Models;
+using MovieProject.DataDelegates;
+using MovieProject.DataDelegates.MovieDelegates;
+
 namespace MovieProject
 {
     public class SqlMovieRepository : IMovieRepository
@@ -16,25 +25,25 @@ namespace MovieProject
             return executor.ExecuteReader(d);
         }
 
-        public Movie RetrieveMovie(string name)
+        public IReadOnlyList<Movie> RetrieveMovie(string name)
         {
             var d = new RetrieveMovieDataDelegate(name);
             return executor.ExecuteReader(d);
         }
 
-        public Movie RetrieveGenre(string genre)
+        public IReadOnlyList<Movie> RetrieveGenre(string genre)
         {
             var d = new RetrieveGenreDataDelegate(genre);
             return executor.ExecuteReader(d);
         }
-
+        /*
         public Movie RetrieveRating(string rating)
         {
             var d = new RetrieveRatingDataDelegate(rating);
             return executor.ExecuteReader(d);
         }
-
-        public Movie RetrieveDirector(string director)
+        */
+        public IReadOnlyList<Movie> RetrieveDirector(string director)
         {
             var d = new RetrieveDirectorDataDelegate(director);
             return executor.ExecuteReader(d);

@@ -1,15 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MovieProject.Models;
+
 namespace MovieProject
 {
     public interface IReviewRepository
     {
-        /// <summary>
-        /// Retrieves all Reviews in the database.
-        /// </summary>
-        /// <returns>
-        /// <see cref="IReadOnlyList{Review}"/> containing all Reviews.
-        /// </returns>
-        IReadOnlyList<ShowTime> FetchReview();
 
         /// <summary>
         /// Fetches the review with the given <paramref name="reviewId"/> if it exists.
@@ -21,7 +20,7 @@ namespace MovieProject
         /// <exception cref="DataAccess.RecordNotFoundException">
         /// Thrown if <paramref name="showTimeId"/> does not exist.
         /// </exception>
-        Review FetchReveiw(int reviewId);
+        Review FetchReview(int reviewId);
 
         /// <summary>
         /// Gets the movie with the given <paramref name="movieId"/> if it exists.
@@ -32,7 +31,7 @@ namespace MovieProject
         /// if one exists with with the provided <paramref name="movieId"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        Review FetchMovieReviews(int movieId);
+        IReadOnlyList<Review> FetchMovieReviews(int movieId);
 
         /// <summary>
         /// Gets the movie with the given <paramref name="movieName"/> if it exists.
@@ -43,7 +42,7 @@ namespace MovieProject
         /// if one exists with with the provided <paramref name="time"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        Review RetrieveMovieReviews(string movieName);
+        IReadOnlyList<Review> RetrieveMovieReviews(string movieName);
 
         /// <summary>
         /// Gets the movie with the given <paramref name="viewerId"/> if it exists.
@@ -54,6 +53,6 @@ namespace MovieProject
         /// if one exists with with the provided <paramref name="date"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        Review FetchViewerReviews(int viewerId);
+        IReadOnlyList<Review> FetchViewerReviews(int viewerId);
     }
 }

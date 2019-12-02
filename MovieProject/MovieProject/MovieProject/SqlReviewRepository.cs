@@ -1,7 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using DataAccess;
 using MovieProject.Models;
 using MovieProject.DataDelegates.ReviewDelegates;
+
 namespace MovieProject
 {
     public class SqlReviewRepository : IReviewRepository
@@ -13,25 +18,25 @@ namespace MovieProject
             executor = new SqlCommandExecutor(connectionString);
         }
 
-        public ShowTime FetchReview(int reviewId)
+        public Review FetchReview(int reviewId)
         {
             var d = new FetchReviewDataDelegate(reviewId);
             return executor.ExecuteReader(d);
         }
 
-        public ShowTime FetchMovieReviews(int movieId)
+        public IReadOnlyList<Review> FetchMovieReviews(int movieId)
         {
             var d = new FetchMovieReviewsDataDelegate(movieId);
             return executor.ExecuteReader(d);
         }
 
-        public ShowTime RetrieveMovieReviews(string movieName)
+        public IReadOnlyList<Review> RetrieveMovieReviews(string movieName)
         {
             var d = new RetrieveMovieReviewsDataDelegate(movieName);
             return executor.ExecuteReader(d);
         }
 
-        public ShowTime FetchViewerReviews(int viewerId)
+        public IReadOnlyList<Review> FetchViewerReviews(int viewerId)
         {
             var d = new FetchViewerReviewsDataDelegate(viewerId);
             return executor.ExecuteReader(d);
