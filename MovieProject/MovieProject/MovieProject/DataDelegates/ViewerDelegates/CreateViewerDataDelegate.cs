@@ -17,7 +17,7 @@ namespace MovieProject.DataDelegates.ViewerDelegates
         public readonly string birthdate;
         public readonly string username;
 
-        public CreateViewerDataDelegate(string name, string gender, string email, string birthdate, string username)
+        public CreateViewerDataDelegate(string gender, string email, string birthdate, string username, string name)
             : base("Project.CreateViewer")
         {
             this.name = name;
