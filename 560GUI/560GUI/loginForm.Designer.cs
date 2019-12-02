@@ -30,9 +30,7 @@
         {
             this.finalLoginButton = new System.Windows.Forms.Button();
             this.userTextBox = new System.Windows.Forms.TextBox();
-            this.pwTextBox = new System.Windows.Forms.TextBox();
             this.userLabel = new System.Windows.Forms.Label();
-            this.pwLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
             this.createAccountLink = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
@@ -49,35 +47,19 @@
             // 
             // userTextBox
             // 
-            this.userTextBox.Location = new System.Drawing.Point(37, 61);
+            this.userTextBox.Location = new System.Drawing.Point(37, 80);
             this.userTextBox.Name = "userTextBox";
             this.userTextBox.Size = new System.Drawing.Size(253, 20);
             this.userTextBox.TabIndex = 2;
             // 
-            // pwTextBox
-            // 
-            this.pwTextBox.Location = new System.Drawing.Point(37, 104);
-            this.pwTextBox.Name = "pwTextBox";
-            this.pwTextBox.Size = new System.Drawing.Size(253, 20);
-            this.pwTextBox.TabIndex = 3;
-            // 
             // userLabel
             // 
             this.userLabel.AutoSize = true;
-            this.userLabel.Location = new System.Drawing.Point(34, 45);
+            this.userLabel.Location = new System.Drawing.Point(34, 64);
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(55, 13);
+            this.userLabel.Size = new System.Drawing.Size(32, 13);
             this.userLabel.TabIndex = 4;
-            this.userLabel.Text = "Username";
-            // 
-            // pwLabel
-            // 
-            this.pwLabel.AutoSize = true;
-            this.pwLabel.Location = new System.Drawing.Point(37, 88);
-            this.pwLabel.Name = "pwLabel";
-            this.pwLabel.Size = new System.Drawing.Size(53, 13);
-            this.pwLabel.TabIndex = 5;
-            this.pwLabel.Text = "Password";
+            this.userLabel.Text = "Email";
             // 
             // titleLabel
             // 
@@ -107,9 +89,7 @@
             this.ClientSize = new System.Drawing.Size(340, 230);
             this.Controls.Add(this.createAccountLink);
             this.Controls.Add(this.titleLabel);
-            this.Controls.Add(this.pwLabel);
             this.Controls.Add(this.userLabel);
-            this.Controls.Add(this.pwTextBox);
             this.Controls.Add(this.userTextBox);
             this.Controls.Add(this.finalLoginButton);
             this.Name = "loginForm";
@@ -123,9 +103,7 @@
 
         private System.Windows.Forms.Button finalLoginButton;
         private System.Windows.Forms.TextBox userTextBox;
-        private System.Windows.Forms.TextBox pwTextBox;
         private System.Windows.Forms.Label userLabel;
-        private System.Windows.Forms.Label pwLabel;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.LinkLabel createAccountLink;
     }

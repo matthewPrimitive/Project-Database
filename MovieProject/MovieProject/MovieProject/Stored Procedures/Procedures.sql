@@ -64,11 +64,11 @@ WHERE M.MovieId = @MovieId;
 GO
 
 CREATE OR ALTER PROCEDURE Project.RetrieveMovie
-	@MovieName NVARCHAR(128)
+	@Name NVARCHAR(128)
 AS
 SELECT M.MovieId, M.[Name], M.Genre, M.Rating, M.Director
 FROM Project.Movie M
-WHERE M.[Name] = @MovieName;
+WHERE M.[Name] = @Name;
 GO
 
 CREATE OR ALTER PROCEDURE Project.RetrieveGenre
@@ -199,12 +199,12 @@ FROM Project.Viewer V
 WHERE V.Gender = @Gender;
 GO
 
-CREATE OR ALTER PROCEDURE Project.CreateViewer
-	@Name NVARCHAR,
-	@Gender NVARCHAR,
-	@Email NVARCHAR,
-	@BirthDate NVARCHAR,
-	@Username NVARCHAR,
+CREATE OR ALTER PROCEDURE Project.CreateViewer	
+	@Gender NVARCHAR(32),
+	@Email NVARCHAR(128),
+	@BirthDate NVARCHAR(64),
+	@Username NVARCHAR(64),
+	@Name NVARCHAR(64),
 	@ViewerId INT OUTPUT
 AS
 INSERT Project.Viewer([Name], Gender, Email, BirthDate, Username)
@@ -298,3 +298,14 @@ SELECT A.ActorId, A.[Name]
 FROM Project.Actor A
 WHERE A.[Name] = @Name;
 GO
+
+CREATE OR ALTER PROCEDURE Project.FetchActorOnMovie
+	@MovieId INT
+AS
+SELECT A.ActorId, A.[Name]
+FROM Project.Actor A
+	INNER JOIN Project.MovieActor MA ON MA.ActorId = A.ActorId
+	INNER JOIN Project.Movie M ON M.MovieId = MA.MovieId
+WHERE M.MovieId = @MovieId
+GO
+

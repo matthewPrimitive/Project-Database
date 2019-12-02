@@ -29,14 +29,14 @@ namespace _560GUI
 
         private void createUserButton_Click(object sender, EventArgs e)
         {
-            string user = textBox1.Text;
+            string user = textBox1.Text.ToLower();
             string name = textBox2.Text;
             string gender = "Male";
             if(checkBox2.Checked)
             {
                 gender = "Female";
             }
-            string asString = dateTimePicker1.Value.ToString("dd MMMM yyyy hh:mm:ss tt");
+            string asString = dateTimePicker1.Value.ToString("yyyy/MM/dd");
 
             try
             {
@@ -49,9 +49,8 @@ namespace _560GUI
                 mainForm.changeLabel(mainForm.theUser.userName);
 
                 string[] username = user.Split('@');
-                string UsernameAsString = username.ToString();
 
-                viewerRepo.CreateViewer(gender, user, asString, UsernameAsString, name);
+                viewerRepo.CreateViewer(gender, user, asString, username[0], name);
                 MessageBox.Show("new user created!");
                 currentUser newUser = new currentUser(user);
                 this.Close();

@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataDelegates\ActorDelegates\FetchActorOnMovieDataDelegate.cs" />
     <Compile Include="DataDelegates\ActorDelegates\FetchActorOnNameDataDelegate.cs" />
     <Compile Include="DataDelegates\ActorDelegates\FetchActorDataDelegate.cs" />
     <Compile Include="DataDelegates\MovieDelegates\RetrieveMoviesDataDelegate.cs" />

@@ -65,8 +65,33 @@ C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI
 C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI.csproj.CopyComplete
 C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI.exe
 C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI.pdb
-C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.BestTimeForm.resources
-C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.HighestRatedActorForm.resources
-C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.HighestRatedMovieForm.resources
-C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.MostViewedMovieForm.resources
-C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.Cast.resources
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.BestTimeForm.resources
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.HighestRatedActorForm.resources
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.HighestRatedMovieForm.resources
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.MostViewedMovieForm.resources
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\560GUI.csprojAssemblyReference.cache
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.BestTimeForm.resources
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.createAccount.resources
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.Form1.resources
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.HighestRatedActorForm.resources
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.HighestRatedMovieForm.resources
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.MostViewedMovieForm.resources
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.Reviews.resources
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.MovieList.resources
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.loginForm.resources
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.Properties.Resources.resources
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.writeReview.resources
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\560GUI.csproj.GenerateResource.cache
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\560GUI.csproj.CoreCompileInputs.cache
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\560GUI.exe
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\560GUI.pdb
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\bin\Debug\560GUI.exe.config
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\bin\Debug\560GUI.exe
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\bin\Debug\560GUI.pdb
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\bin\Debug\DataAccess.dll
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\bin\Debug\MovieProject.exe
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\bin\Debug\DataAccess.pdb
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\bin\Debug\MovieProject.pdb
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\bin\Debug\MovieProject.exe.config
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\560GUI.csproj.CopyComplete
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.Cast.resources

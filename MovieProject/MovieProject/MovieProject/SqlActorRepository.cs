@@ -1,7 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DataAccess;
 using DataAccess;
 using MovieProject.Models;
 using MovieProject.DataDelegates.ActorDelegates;
+
+
 namespace MovieProject
 {
     public class SqlActorRepository : IActorRepository
@@ -22,6 +29,12 @@ namespace MovieProject
         public Actor FetchActorOnName(string name)
         {
             var d = new FetchActorOnNameDataDelegate(name);
+            return executor.ExecuteReader(d);
+        }
+
+        public IReadOnlyList<Actor> FetchActorOnMovie(int movieId)
+        {
+            var d = new FetchActorOnMovieDataDelegate(movieId);
             return executor.ExecuteReader(d);
         }
     }
