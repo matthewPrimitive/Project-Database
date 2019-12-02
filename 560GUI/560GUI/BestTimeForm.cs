@@ -26,10 +26,12 @@ namespace _560GUI
             IReadOnlyList<Report3Object> list = repo.BestTime();
 
             foreach(Report3Object obj in list)
-            {                
-                uxBestTime.Items.Insert(0, obj.Time);
-                uxBestTime.Items.Insert(1, obj.Day);
-                uxBestTime.Items.Insert(2, obj.NumberOfViewers.ToString());
+            {
+                ListViewItem item = new ListViewItem(obj.Time);
+                item.SubItems.Add(obj.Day);
+                item.SubItems.Add(obj.NumberOfViewers.ToString());
+
+                uxBestTime.Items.Add(item);
             }
         }
     }

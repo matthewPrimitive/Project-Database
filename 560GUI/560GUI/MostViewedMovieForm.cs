@@ -26,6 +26,8 @@ namespace _560GUI
 
         private void uxSearch_Click(object sender, EventArgs e)
         {
+            uxMostViewed.Items.Clear();
+
             string start = uxStartDatePicker.Value.ToString("yyyy-MM-dd");
             string end = uxEndDatePicker.Value.ToString("yyyy-MM-dd");
 
@@ -33,8 +35,9 @@ namespace _560GUI
 
             foreach (Report2Object obj in list)
             {
-                uxMostViewed.Items.Insert(0, obj.Name);
-                uxMostViewed.Items.Insert(1, obj.NumberOfViewers.ToString());
+                ListViewItem item = new ListViewItem(obj.Name);
+                item.SubItems.Add(obj.NumberOfViewers.ToString());
+                uxMostViewed.Items.Add(item);
             }
         }
     }

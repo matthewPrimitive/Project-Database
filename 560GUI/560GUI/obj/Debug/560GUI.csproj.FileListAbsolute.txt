@@ -65,3 +65,7 @@ C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI
 C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI.csproj.CopyComplete
 C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI.exe
 C:\Users\Forbes3559\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI.pdb
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.BestTimeForm.resources
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.HighestRatedActorForm.resources
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.HighestRatedMovieForm.resources
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.MostViewedMovieForm.resources
