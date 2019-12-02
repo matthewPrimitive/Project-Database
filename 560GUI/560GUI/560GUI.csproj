@@ -59,6 +59,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="BestTimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BestTimeForm.Designer.cs">
+      <DependentUpon>BestTimeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HighestRatedMovieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HighestRatedMovieForm.Designer.cs">
+      <DependentUpon>HighestRatedMovieForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HighestRatedActorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HighestRatedActorForm.Designer.cs">
+      <DependentUpon>HighestRatedActorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostViewedMovieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostViewedMovieForm.Designer.cs">
+      <DependentUpon>MostViewedMovieForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reviews.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +109,23 @@
     <Compile Include="writeReview.Designer.cs">
       <DependentUpon>writeReview.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BestTimeForm.resx">
+      <DependentUpon>BestTimeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="createAccount.resx">
       <DependentUpon>createAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighestRatedActorForm.resx">
+      <DependentUpon>HighestRatedActorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighestRatedMovieForm.resx">
+      <DependentUpon>HighestRatedMovieForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostViewedMovieForm.resx">
+      <DependentUpon>MostViewedMovieForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reviews.resx">
       <DependentUpon>Reviews.cs</DependentUpon>

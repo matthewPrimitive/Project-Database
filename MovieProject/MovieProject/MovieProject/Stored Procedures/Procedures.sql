@@ -142,6 +142,29 @@ VALUES (@MovieId, @ViewerId, @ReviewMessage, @Rating)
 SET @ReviewId = SCOPE_IDENTITY();
 GO
 
+-- Might be wrong
+CREATE OR ALTER TRIGGER Project.ReviewTrigger
+ON Project.Review
+AFTER INSERT
+AS
+DECLARE @ReviewAverage TABLE
+(
+	MovieId INT,
+	Rating DECIMAL(2,1)
+);
+INSERT @ReviewAverage(MovieId, Rating)
+SELECT R.MovieId, SUM(R.Rating) / COUNT(R.ReviewId) AS AverageRating
+FROM Project.Review R
+	INNER JOIN Project.Movie M ON M.MovieId = R.MovieId
+GROUP BY R.MovieId
+
+MERGE Project.Movie M
+USING @ReviewAverage R ON R.MovieId = M.MovieId
+WHEN MATCHED THEN
+	UPDATE
+	SET
+	M.Rating = R.Rating;
+GO
 
 -- Queries on Viewer Table
 CREATE OR ALTER PROCEDURE Project.FetchViewer

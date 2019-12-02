@@ -7,16 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MovieProject;
+using DataAccess;
+using MovieProject.Models;
 
 namespace _560GUI
 {
     public partial class MovieList : Form
     {
+
+        const string connectionString = @"Data Source=mssql.cs.ksu.edu;Initial Catalog=jamesmmatt;User Id=jamesmmatt;Password=Oscarpatatoe14;";
+
+        private IActorRepository actorRepo;
+        private IMovieRepository movieRepo;
+        private IReviewRepository reviewRepo;
+        private IShowTimeRepository showtimeRepo;
+        private ITicketRepository ticketRepo;
+        private IViewerRepository viewerRepo;
+
         Form1 mainForm = new Form1();
         currentUser cu = new currentUser();
 
         public MovieList()
         {
+            actorRepo = new SqlActorRepository(connectionString);
+            movieRepo = new SqlMovieRepository(connectionString);
+            reviewRepo = new SqlReviewRepository(connectionString);
+            showtimeRepo = new SqlShowTimeRepository(connectionString);
+            ticketRepo = new SqlTicketRepository(connectionString);
+            viewerRepo = new SqlViewerRepository(connectionString);
+
 
         }
 
@@ -38,13 +58,35 @@ namespace _560GUI
             mlSignedinLabel.Text = mainForm.getCurrentUserLabel();
             cu = mainForm.getCurrentUser();
 
+            actorRepo = new SqlActorRepository(connectionString);
+            movieRepo = new SqlMovieRepository(connectionString);
+            reviewRepo = new SqlReviewRepository(connectionString);
+            showtimeRepo = new SqlShowTimeRepository(connectionString);
+            ticketRepo = new SqlTicketRepository(connectionString);
+            viewerRepo = new SqlViewerRepository(connectionString);
+
+            IReadOnlyList<Movie> m = movieRepo.RetrieveMovies();
+            foreach (Movie movie in m)
+            {
+                listBox1.Items.Add(movie.Name);
+            }
+
             //populate listbox
         }
 
         private void reviewButton_Click(object sender, EventArgs e)
         {
-            var r = new Reviews(this);
-            r.Show();
+            if (listBox1.SelectedItem != null)
+            {
+                int ind = listBox1.SelectedIndex;
+                var r = new Reviews(this , ind);
+                r.Show();
+            }
+            else
+            {
+                MessageBox.Show("Select a movie to see it's reviews");
+            }
+            
         }
     }
 }
