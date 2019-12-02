@@ -203,7 +203,7 @@ CREATE OR ALTER PROCEDURE Project.CreateViewer
 	@Name NVARCHAR,
 	@Gender NVARCHAR,
 	@Email NVARCHAR,
-	@BirthDate DATE,
+	@BirthDate NVARCHAR,
 	@Username NVARCHAR,
 	@ViewerId INT OUTPUT
 AS
