@@ -94,4 +94,4 @@ C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI
 C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\bin\Debug\MovieProject.pdb
 C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\bin\Debug\MovieProject.exe.config
 C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\560GUI.csproj.CopyComplete
-U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.Cast.resources
+C:\Users\jamesmmatt\source\repos\matthewPrimitive\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.Cast.resources
