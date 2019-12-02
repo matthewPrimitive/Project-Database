@@ -26,8 +26,9 @@ namespace _560GUI
 
             foreach(Report4Object obj in list)
             {              
-                uxActorList.Items.Insert(0, obj.Name);
-                uxActorList.Items.Insert(1, obj.OverallRating.ToString());
+                ListViewItem item = new ListViewItem(obj.Name);
+                item.SubItems.Add(obj.OverallRating.ToString());
+                uxActorList.Items.Add(item);
             }
         }
     }
