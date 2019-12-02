@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using MovieProject;
 using DataAccess;
 using MovieProject.Models;
-
+using System.Text;
 
 namespace _560GUI
 {
@@ -43,12 +43,13 @@ namespace _560GUI
         {
             string user = "";
 
-            user = userTextBox.Text;
+            user = userTextBox.Text.ToLower();
                 
             try
             {
                 Viewer v = viewerRepo.RetrieveViewerOnEmail(user);
-                mainForm.theUser = new currentUser(user);
+                string[] username = user.Split('@');
+                mainForm.theUser = new currentUser(username[0]);
                 mainForm.changeLabel(mainForm.theUser.userName);
             }
             catch
