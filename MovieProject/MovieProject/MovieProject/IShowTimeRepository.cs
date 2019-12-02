@@ -16,7 +16,7 @@ namespace MovieProject
         /// <returns>
         /// <see cref="IReadOnlyList{ShowTime}"/> containing all showtimes.
         /// </returns>
-        IReadOnlyList<ShowTime> FetchShowTime();
+       // IReadOnlyList<ShowTime> FetchShowTime();
 
         /// <summary>
         /// Fetches the movie with the given <paramref name="showTimeId"/> if it exists.

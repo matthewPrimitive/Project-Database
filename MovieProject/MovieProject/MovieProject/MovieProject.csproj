@@ -71,12 +71,6 @@
     <Compile Include="DataDelegates\ViewerDelegates\RetrieveViewerOnNameDataDelegate.cs" />
     <Compile Include="DataDelegates\ViewerDelegates\RetrieveViewerOnEmailDataDelegate.cs" />
     <Compile Include="DataDelegates\ViewerDelegates\FetchViewerDataDelegate.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\Actor.cs" />
     <Compile Include="Models\Report4Object.cs" />
     <Compile Include="Models\Report3Object.cs" />

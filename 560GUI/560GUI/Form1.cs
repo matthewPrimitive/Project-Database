@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MovieProject;
 using DataAccess;
+using MovieProject.Models;
 
 namespace _560GUI
 {
     public partial class Form1 : Form
     {
-        const string connectionString = "Server=mssql.cs.ksu.edu;Database=tholt15;User Id=tholt15;Password=TJholt1544";
+        const string connectionString = @"Data Source=mssql.cs.ksu.edu;Initial Catalog=jamesmmatt;User Id=jamesmmatt;Password=Oscarpatatoe14;";
 
         private IActorRepository actorRepo;
         private IMovieRepository movieRepo;
@@ -41,6 +42,9 @@ namespace _560GUI
             ticketRepo = new SqlTicketRepository(connectionString);
             viewerRepo = new SqlViewerRepository(connectionString);
 
+            //db test
+            Movie testmovie = movieRepo.FetchMovie(1);
+            dropList.Items.Add(testmovie.Name);
 
             // dumby data to ensure its making the moves
             dropList.Items.Add("Movie 1");

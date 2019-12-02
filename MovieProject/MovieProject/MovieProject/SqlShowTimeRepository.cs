@@ -16,13 +16,13 @@ namespace MovieProject
         {
             executor = new SqlCommandExecutor(connectionString);
         }
-
+        /*
         public IReadOnlyList<ShowTime> FetchShowTime()
         {
             var d = new FetchShowTimesDataDelegate();
             return executor.ExecuteReader(d);
         }
-
+        */
         public ShowTime FetchShowTime(int showTimeId)
         {
             var d = new FetchShowTimeDataDelegate(showTimeId);

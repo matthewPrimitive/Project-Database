@@ -23,3 +23,24 @@ C:\Users\Forbe\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\560GUI.pdb
 C:\Users\Forbe\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.MovieList.resources
 C:\Users\Forbe\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.Reviews.resources
 C:\Users\Forbe\Source\Repos\Project-Database\560GUI\560GUI\obj\Debug\_560GUI.writeReview.resources
+U:\560 project\560GUI\560GUI\obj\Debug\560GUI.csprojAssemblyReference.cache
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.createAccount.resources
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.Form1.resources
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.Reviews.resources
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.MovieList.resources
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.loginForm.resources
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.Properties.Resources.resources
+U:\560 project\560GUI\560GUI\obj\Debug\_560GUI.writeReview.resources
+U:\560 project\560GUI\560GUI\obj\Debug\560GUI.csproj.GenerateResource.cache
+U:\560 project\560GUI\560GUI\obj\Debug\560GUI.csproj.CoreCompileInputs.cache
+U:\560 project\560GUI\560GUI\obj\Debug\560GUI.exe
+U:\560 project\560GUI\560GUI\obj\Debug\560GUI.pdb
+U:\560 project\560GUI\560GUI\bin\Debug\560GUI.exe.config
+U:\560 project\560GUI\560GUI\bin\Debug\560GUI.exe
+U:\560 project\560GUI\560GUI\bin\Debug\560GUI.pdb
+U:\560 project\560GUI\560GUI\bin\Debug\DataAccess.dll
+U:\560 project\560GUI\560GUI\bin\Debug\MovieProject.exe
+U:\560 project\560GUI\560GUI\bin\Debug\DataAccess.pdb
+U:\560 project\560GUI\560GUI\bin\Debug\MovieProject.pdb
+U:\560 project\560GUI\560GUI\bin\Debug\MovieProject.exe.config
+U:\560 project\560GUI\560GUI\obj\Debug\560GUI.csproj.CopyComplete
