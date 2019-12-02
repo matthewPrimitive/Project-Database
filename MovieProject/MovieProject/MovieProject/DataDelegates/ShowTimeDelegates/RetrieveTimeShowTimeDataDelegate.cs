@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace MovieProject.DataDelegates.ShowTimeDelegates
 {
-    public class RetrieveTimeShowTimeDataDelegate : DataReaderDelegate<ShowTime>
+    public class RetrieveTimeShowTimeDataDelegate : DataReaderDelegate<IReadOnlyList<ShowTime>>
     {
         private readonly string time;
 
@@ -19,23 +19,20 @@ namespace MovieProject.DataDelegates.ShowTimeDelegates
             this.time = time;
         }
 
-        public override void PrepareCommand(SqlCommand command)
+        public override IReadOnlyList<ShowTime> Translate(SqlCommand command, IDataRowReader reader)
         {
-            base.PrepareCommand(command);
+            var showtimes = new List<ShowTime>();
 
-            command.Parameters.AddWithValue("Time", time);
-        }
-
-        public override ShowTime Translate(SqlCommand command, IDataRowReader reader)
-        {
-            if (!reader.Read())
-                throw new RecordNotFoundException(time.ToString());
-
-            return new ShowTime(reader.GetInt32("ShowTimeId"),
-                reader.GetInt32("MovieId"),
-                time,
-                reader.GetString("Date"),
-                reader.GetDecimal("Price"));
+            while (reader.Read())
+            {
+                showtimes.Add(new ShowTime(
+                    reader.GetInt32("ShowTimeId"),
+                    reader.GetInt32("MovieId"),
+                    time,
+                    reader.GetString("Date"),
+                    reader.GetDecimal("Price")));
+            }
+            return showtimes;
         }
     }
 }

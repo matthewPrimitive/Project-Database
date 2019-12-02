@@ -56,6 +56,7 @@
     <Compile Include="DataDelegates\ReportQueryDelegates\HighestRatedActorsDataDelegate.cs" />
     <Compile Include="DataDelegates\ReportQueryDelegates\MostViewedDataDelegate.cs" />
     <Compile Include="DataDelegates\ReportQueryDelegates\RatingOverTimeDataDelegate.cs" />
+    <Compile Include="DataDelegates\ReviewDelegates\CreateReviewDataDelegate.cs" />
     <Compile Include="DataDelegates\ReviewDelegates\FetchViewerReviewsDataDelegate.cs" />
     <Compile Include="DataDelegates\ReviewDelegates\RetrieveMovieReviewsDataDelegate.cs" />
     <Compile Include="DataDelegates\ReviewDelegates\FetchMovieReviewsDataDelegate.cs" />
@@ -64,9 +65,11 @@
     <Compile Include="DataDelegates\ShowTimeDelegates\RetrieveTimeShowTimeDataDelegate.cs" />
     <Compile Include="DataDelegates\ShowTimeDelegates\RetrieveMovieShowTimeDataDelegate.cs" />
     <Compile Include="DataDelegates\ShowTimeDelegates\FetchShowTimeDataDelegate.cs" />
+    <Compile Include="DataDelegates\TicketDelegates\CreateTicketDataDelegate.cs" />
     <Compile Include="DataDelegates\TicketDelegates\RetrieveShowTimeTicketDataDelegate.cs" />
     <Compile Include="DataDelegates\TicketDelegates\RetrieveViewerTicketDataDelegate.cs" />
     <Compile Include="DataDelegates\TicketDelegates\FetchTicketDataDelegate.cs" />
+    <Compile Include="DataDelegates\ViewerDelegates\CreateViewerDataDelegate.cs" />
     <Compile Include="DataDelegates\ViewerDelegates\RetrieveViewerOnGenderDataDelegate.cs" />
     <Compile Include="DataDelegates\ViewerDelegates\RetrieveViewerOnNameDataDelegate.cs" />
     <Compile Include="DataDelegates\ViewerDelegates\RetrieveViewerOnEmailDataDelegate.cs" />
@@ -142,6 +145,9 @@
     <Content Include="Create Table and Data SQL\InsertViewers.sql" />
     <Content Include="Stored Procedures\Procedures.sql" />
     <Content Include="Stored Procedures\Project.BestTime.sql" />
+    <Content Include="Stored Procedures\Project.CreateReview.sql" />
+    <Content Include="Stored Procedures\Project.CreateTicket.sql" />
+    <Content Include="Stored Procedures\Project.CreateViewer.sql" />
     <Content Include="Stored Procedures\Project.FetchActor.sql" />
     <Content Include="Stored Procedures\Project.FetchActorOnName.sql" />
     <Content Include="Stored Procedures\Project.FetchMovie.sql" />

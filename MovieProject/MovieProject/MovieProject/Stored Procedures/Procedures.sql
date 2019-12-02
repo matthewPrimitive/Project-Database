@@ -129,6 +129,20 @@ FROM Project.Review R
 WHERE R.ViewerId = @ViewerId;
 GO
 
+CREATE OR ALTER PROCEDURE Project.CreateReview
+	@ViewerId INT,
+	@MovieId INT,
+	@ReviewMessage NVARCHAR,
+	@Rating DECIMAL(2,1),
+	@ReviewId INT OUTPUT
+AS
+INSERT Project.Review(MovieId, ViewerId, ReviewMessage,  Rating)
+VALUES (@MovieId, @ViewerId, @ReviewMessage, @Rating)
+
+SET @ReviewId = SCOPE_IDENTITY();
+GO
+
+
 -- Queries on Viewer Table
 CREATE OR ALTER PROCEDURE Project.FetchViewer
 	@ViewerId INT
@@ -162,6 +176,20 @@ FROM Project.Viewer V
 WHERE V.Gender = @Gender;
 GO
 
+CREATE OR ALTER PROCEDURE Project.CreateViewer
+	@Name NVARCHAR,
+	@Gender NVARCHAR,
+	@Email NVARCHAR,
+	@BirthDate DATE,
+	@Username NVARCHAR,
+	@ViewerId INT OUTPUT
+AS
+INSERT Project.Viewer([Name], Gender, Email, BirthDate, Username)
+VALUES (@Name, @Gender, @Email, @BirthDate, @Username)
+
+SET @ViewerId = SCOPE_IDENTITY();
+GO
+
 -- Queries on Ticket Table --
 CREATE OR ALTER PROCEDURE Project.FetchTicket
 	@TicketId INT
@@ -185,6 +213,17 @@ AS
 SELECT T.TicketId, T.ViewerId, T.ShowTimeId, T.PurchasedOn
 FROM Project.Ticket T
 WHERE T.ShowTimeId = @ShowTimeId;
+GO
+
+CREATE OR ALTER PROCEDURE Project.CreateTicket
+	@ViewerId INT,
+	@ShowTimeId INT,
+	@TicketId INT OUTPUT
+AS
+INSERT Project.Ticket(ViewerId, ShowTimeId)
+VALUES (@ViewerId, @ShowTimeId)
+
+SET @TicketId = SCOPE_IDENTITY();
 GO
 
 -- Queries on ShowTime Table --
