@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MovieProject;
+using DataAccess;
+using MovieProject.Models;
+
 
 namespace _560GUI
 {
@@ -14,22 +18,48 @@ namespace _560GUI
     {
         Form1 mainForm = new Form1();
 
+        const string connectionString = @"Data Source=mssql.cs.ksu.edu;Initial Catalog=jamesmmatt;User Id=jamesmmatt;Password=Oscarpatatoe14;";
+
+        private IActorRepository actorRepo;
+        private IMovieRepository movieRepo;
+        private IReviewRepository reviewRepo;
+        private IShowTimeRepository showtimeRepo;
+        private ITicketRepository ticketRepo;
+        private IViewerRepository viewerRepo;
+
         public loginForm(Form1 mf)
         {
             InitializeComponent();
             mainForm = mf;
+            actorRepo = new SqlActorRepository(connectionString);
+            movieRepo = new SqlMovieRepository(connectionString);
+            reviewRepo = new SqlReviewRepository(connectionString);
+            showtimeRepo = new SqlShowTimeRepository(connectionString);
+            ticketRepo = new SqlTicketRepository(connectionString);
+            viewerRepo = new SqlViewerRepository(connectionString);
         }
 
         private void finalLoginButton_Click(object sender, EventArgs e)
         {
-            string user = userTextBox.Text;
-            string pw = pwTextBox.Text;
+            string user = "";
+
+            user = userTextBox.Text;
+                
+            try
+            {
+                Viewer v = viewerRepo.RetrieveViewerOnEmail(user);
+                mainForm.theUser = new currentUser(user);
+                mainForm.changeLabel(mainForm.theUser.userName);
+            }
+            catch
+            {
+                MessageBox.Show("Email not in database try again.");
+            }
 
             //bring in table and check if there's an account matching these
 
             //create new user object to have as a variable?
-            mainForm.theUser = new currentUser(user, pw);
-            mainForm.changeLabel(mainForm.theUser.userName);
+
 
             this.Close();
         }

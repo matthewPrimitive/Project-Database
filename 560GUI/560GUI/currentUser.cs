@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace _560GUI
 {
+
     public class currentUser
     {
 
@@ -17,10 +18,9 @@ namespace _560GUI
             
         }
 
-        public currentUser(string usr, string pw)
+        public currentUser(string usr)
         {
             userName = usr;
-            password = pw;
         }
 
         //add to database after

@@ -127,7 +127,7 @@ namespace _560GUI
             {
                 string movie = movieListbox.SelectedItem.ToString();
                 string full = showtimeListBox.SelectedItem.ToString();
-                string time = 
+                //string time = 
 
 
                 string ticketMessage = "Ticket for " + movieListbox.SelectedItem.ToString() + " purchased!\n Thank you for your order!";
