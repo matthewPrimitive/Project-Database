@@ -50,9 +50,9 @@ namespace _560GUI
                 dropList.Items.Add(movie.Name);
             }
 
-            showtimeDropbox.Items.Add("Time 1");
-            showtimeDropbox.Items.Add("Time 2");
-            showtimeDropbox.Items.Add("Time 3");
+            showtimeDropbox.Items.Add("09:30:00");
+            showtimeDropbox.Items.Add("13:00:00");
+            showtimeDropbox.Items.Add("17:30:00");
             // listCollection.Itmes.Add(databaseMovies) // from the data base add the current movies showing  into the drop list
 
 
@@ -95,9 +95,40 @@ namespace _560GUI
 
         private void showtimeSearch_Click(object sender, EventArgs e)
         {
-            // this is just populating the list box with the dumby data for now
-            object selectedItem = showtimeDropbox.SelectedItem;
-            string movieTitle = selectedItem.ToString();
+            if (movieListbox.SelectedItem != null && showtimeListBox != null)
+            {
+                object selectedItem = showtimeDropbox.SelectedItem;
+                string movieTitle = selectedItem.ToString();
+                showtimeListBox.Items.Clear();
+
+                string movieName = movieListbox.SelectedItem.ToString();
+                IReadOnlyList<Movie> m = movieRepo.RetrieveMovies();
+                Movie selectedMovie = null;
+                foreach (Movie movie in m)
+                {
+                    if (movie.Name.Equals(movieName))
+                    {
+                        selectedMovie = movie;
+                        break;
+                    }
+                }
+
+                IReadOnlyList<ShowTime> showtimes = showtimeRepo.RetrieveMovieShowTime(selectedMovie.MovieId);
+
+                //showtimerepo.retrievemovieshowtime
+                foreach (ShowTime sh in showtimes)
+                {
+                    string time = sh.Time;
+                    if (selectedItem.Equals(time))
+                    {
+                        showtimeListBox.Items.Add(sh);
+
+                    }
+
+                }
+            }
+                // this is just populating the list box with the dumby data for now
+            
             //listBox1.Items.Add(movieTitle);
             // this will populate all the movies that have to do with the show time
         }
