@@ -18,6 +18,12 @@ namespace MovieProject
             executor = new SqlCommandExecutor(connectionString);
         }
 
+        public Review CreateReview(int viewerId, int movieId, decimal rating, string review)
+        {
+            var d = new CreateReviewDataDelegate(viewerId, movieId, review, rating);
+            return executor.ExecuteNonQuery(d);
+        }
+
         public Review FetchReview(int reviewId)
         {
             var d = new FetchReviewDataDelegate(reviewId);
