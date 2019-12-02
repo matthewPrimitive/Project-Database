@@ -113,20 +113,20 @@
             // currentShowingToolStripMenuItem
             // 
             this.currentShowingToolStripMenuItem.Name = "currentShowingToolStripMenuItem";
-            this.currentShowingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.currentShowingToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.currentShowingToolStripMenuItem.Text = "Curent Showings";
             // 
             // movieDatabaseToolStripMenuItem
             // 
             this.movieDatabaseToolStripMenuItem.Name = "movieDatabaseToolStripMenuItem";
-            this.movieDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.movieDatabaseToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.movieDatabaseToolStripMenuItem.Text = "Movie Database";
             this.movieDatabaseToolStripMenuItem.Click += new System.EventHandler(this.movieDatabaseToolStripMenuItem_Click);
             // 
             // writeAReviewToolStripMenuItem
             // 
             this.writeAReviewToolStripMenuItem.Name = "writeAReviewToolStripMenuItem";
-            this.writeAReviewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.writeAReviewToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.writeAReviewToolStripMenuItem.Text = "Write a Review";
             // 
             // loginButton
@@ -294,7 +294,6 @@
         private System.Windows.Forms.ComboBox showtimeDropbox;
         private System.Windows.Forms.Button showtimeSearch;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem currentShowingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem movieDatabaseToolStripMenuItem;
@@ -311,6 +310,7 @@
         private System.Windows.Forms.Button ux_HighestRatedActors;
         private System.Windows.Forms.Button ux_MostViewedMovies;
         private System.Windows.Forms.Button ux_RatingOverTime;
+        public System.Windows.Forms.Button loginButton;
     }
 }
 

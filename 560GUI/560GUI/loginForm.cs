@@ -48,9 +48,10 @@ namespace _560GUI
             try
             {
                 Viewer v = viewerRepo.RetrieveViewerOnEmail(user);
-                string[] username = user.Split('@');
-                mainForm.theUser = new currentUser(username[0]);
+                //string[] username = user.Split('@');
+                mainForm.theUser = new currentUser(user);
                 mainForm.changeLabel(mainForm.theUser.userName);
+                mainForm.Controls.Remove(mainForm.loginButton);              
             }
             catch
             {
