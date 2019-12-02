@@ -42,8 +42,9 @@ namespace _560GUI
             ticketRepo = new SqlTicketRepository(connectionString);
             viewerRepo = new SqlViewerRepository(connectionString);
 
-            //db test
+            
             IReadOnlyList<Movie> m = movieRepo.RetrieveMovies();
+
             foreach (Movie movie in m)
             {
                 dropList.Items.Add(movie.Name);
@@ -173,6 +174,30 @@ namespace _560GUI
         public string getCurrentUserLabel()
         {
             return currentUserLabel.Text;
+        }
+
+        private void ux_BestTimeButton_Click(object sender, EventArgs e)
+        {
+            var btf = new BestTimeForm(connectionString);
+            btf.Show();
+        }
+
+        private void ux_HighestRatedActors_Click(object sender, EventArgs e)
+        {
+            var hraf = new HighestRatedActorForm(connectionString);
+            hraf.Show();
+        }
+
+        private void ux_MostViewedMovies_Click(object sender, EventArgs e)
+        {
+            var mvmf = new MostViewedMovieForm(connectionString);
+            mvmf.Show();
+        }
+
+        private void ux_RatingOverTime_Click(object sender, EventArgs e)
+        {
+            var hrmf = new HighestRatedMovieForm(connectionString);
+            hrmf.Show();
         }
     }
 }

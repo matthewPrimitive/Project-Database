@@ -74,6 +74,10 @@
     <Compile Include="DataDelegates\ViewerDelegates\RetrieveViewerOnNameDataDelegate.cs" />
     <Compile Include="DataDelegates\ViewerDelegates\RetrieveViewerOnEmailDataDelegate.cs" />
     <Compile Include="DataDelegates\ViewerDelegates\FetchViewerDataDelegate.cs" />
+    <Compile Include="IBestTimeRepository.cs" />
+    <Compile Include="IHighestRatedActorRepository.cs" />
+    <Compile Include="IHighestRatedMovieRepository.cs" />
+    <Compile Include="IMostViewedMovieRepository.cs" />
     <Compile Include="Models\Actor.cs" />
     <Compile Include="Models\Report4Object.cs" />
     <Compile Include="Models\Report3Object.cs" />
@@ -113,6 +117,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="IMovieRepository.cs" />
+    <Compile Include="SqlBestTimeRepository.cs" />
+    <Compile Include="SqlHighestRatedActorRepository.cs" />
+    <Compile Include="SqlHighestRatedMovieRepository.cs" />
+    <Compile Include="SqlMostViewedMovieRepository.cs" />
     <Compile Include="SqlMovieRepository.cs" />
     <Compile Include="IShowTimeRepository.cs" />
     <Compile Include="SqlShowTimeRepository.cs" />
