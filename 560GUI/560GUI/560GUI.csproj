@@ -125,5 +125,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MovieProject\DataAccess\DataAccess.csproj">
+      <Project>{a5ac459d-6c0a-4d6e-ad65-ecb3e0fec3a7}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MovieProject\MovieProject\MovieProject\MovieProject.csproj">
+      <Project>{3d7d12d8-cd78-4ce2-a8c0-f3bcf0e9bf6d}</Project>
+      <Name>MovieProject</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

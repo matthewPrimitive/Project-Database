@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieProject", "MovieProjec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "..\DataAccess\DataAccess.csproj", "{A5AC459D-6C0A-4D6E-AD65-ECB3E0FEC3A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "560GUI", "..\..\560GUI\560GUI\560GUI.csproj", "{7B2CB7E6-9195-4A75-B65A-A827B67336C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A5AC459D-6C0A-4D6E-AD65-ECB3E0FEC3A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5AC459D-6C0A-4D6E-AD65-ECB3E0FEC3A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5AC459D-6C0A-4D6E-AD65-ECB3E0FEC3A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B2CB7E6-9195-4A75-B65A-A827B67336C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B2CB7E6-9195-4A75-B65A-A827B67336C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B2CB7E6-9195-4A75-B65A-A827B67336C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B2CB7E6-9195-4A75-B65A-A827B67336C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
