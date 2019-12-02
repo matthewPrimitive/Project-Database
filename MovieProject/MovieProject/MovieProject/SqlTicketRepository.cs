@@ -19,6 +19,12 @@ namespace MovieProject
             executor = new SqlCommandExecutor(connectionString);
         }
 
+        public Ticket CreateTicket(int viewerId, int showTimeId, string purchasedOn)
+        {
+            var d = new CreateTicketDataDelegate(viewerId, showTimeId, purchasedOn);
+            return executor.ExecuteNonQuery(d);
+        }
+
         public Ticket FetchTicket(int ticketId)
         {
             var d = new FetchTicketDataDelegate(ticketId);

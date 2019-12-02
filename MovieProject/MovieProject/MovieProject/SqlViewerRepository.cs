@@ -18,6 +18,12 @@ namespace MovieProject
             executor = new SqlCommandExecutor(connectionString);
         }
 
+        public Viewer CreateViewer(string gender, string email, string birthDate, string username, string name)
+        {
+            var d = new CreateViewerDataDelegate(gender,email,birthDate,username, name);
+            return executor.ExecuteNonQuery(d);
+        }
+
         public Viewer FetchViewer(int viewerId)
         {
             var d = new FetchViewerDataDelegate(viewerId);
