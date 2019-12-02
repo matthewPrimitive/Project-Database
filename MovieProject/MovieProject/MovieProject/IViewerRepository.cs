@@ -54,5 +54,13 @@ namespace MovieProject
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
         Viewer RetrieveViewerOnGender(string gender);
+
+        /// <summary>
+        /// Creates a new person in the repository.
+        /// </summary>
+        /// <returns>
+        /// The resulting instance of <see cref="Person"/>.
+        /// </returns>
+        Viewer CreateViewer(string gender, string email, string birthDate, string username, string name);
     }
 }

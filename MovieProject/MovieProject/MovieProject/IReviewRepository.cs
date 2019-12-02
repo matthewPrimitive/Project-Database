@@ -54,5 +54,17 @@ namespace MovieProject
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
         IReadOnlyList<Review> FetchViewerReviews(int viewerId);
+
+        /// <summary>
+        /// Creates a new person in the repository.
+        /// </summary>
+        /// <param name="viewerid">The viewer id</param>
+        /// <param name="movieId">The movie id</param>
+        /// <param name="rating">The rating of the movie</param>
+        /// <param name="review">The review of the movie</param>
+        /// <returns>
+        /// The resulting instance of <see cref="Person"/>.
+        /// </returns>
+        Review CreateReview(int viewerId, int movieId, decimal rating, string review);
     }
 }

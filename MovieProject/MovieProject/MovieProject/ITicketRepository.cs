@@ -43,5 +43,16 @@ namespace MovieProject
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
         IReadOnlyList<Ticket> RetrieveShowTimeTicket(int showTimeId);
+
+        /// <summary>
+        /// Creates a new person in the repository.
+        /// </summary>
+        /// <param name="viewerid">The viewer id</param>
+        /// <param name="showTimeId">The show time id</param>
+        /// <param name="purchasedOn">The time the ticket was purchased</param>
+        /// <returns>
+        /// The resulting instance of <see cref="Person"/>.
+        /// </returns>
+        Ticket CreateTicket(int viewerId, int showTimeId, string purchasedOn);
     }
 }
