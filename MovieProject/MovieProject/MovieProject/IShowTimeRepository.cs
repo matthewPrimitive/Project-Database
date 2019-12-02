@@ -39,7 +39,7 @@ namespace MovieProject
         /// if one exists with with the provided <paramref name="movieId"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        ShowTime RetrieveMovieShowTime(int movieId);
+        IReadOnlyList<ShowTime> RetrieveMovieShowTime(int movieId);
 
         /// <summary>
         /// Gets the movie with the given <paramref name="showTimeId"/> if it exists.
@@ -50,7 +50,7 @@ namespace MovieProject
         /// if one exists with with the provided <paramref name="time"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        ShowTime RetrieveTimeShowTime(string time);
+        IReadOnlyList<ShowTime> RetrieveTimeShowTime(string time);
 
         /// <summary>
         /// Gets the movie with the given <paramref name="date"/> if it exists.
@@ -61,6 +61,6 @@ namespace MovieProject
         /// if one exists with with the provided <paramref name="date"/>.
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
-        ShowTime RetrieveDateShowTime(string date);
+        IReadOnlyList<ShowTime> RetrieveDateShowTime(string date);
     }
 }

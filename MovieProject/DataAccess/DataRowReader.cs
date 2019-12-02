@@ -37,6 +37,18 @@ namespace DataAccess
         {
             return GetValue(name, reader.GetDecimal, defaultValue);
         }
+        /*
+        public TimeSpan GetTimeSpan(string name, TimeSpan defaultValue)
+        {
+            return GetValue(name, reader.GetTimeSpan, defaultValue);
+        }
+
+        public TimeSpan GetTimeSpan(string name)
+        {
+            return GetValue(name, reader.GetTimeSpan);
+        }
+        */
+       
 
       public int GetInt32(string name)
       {

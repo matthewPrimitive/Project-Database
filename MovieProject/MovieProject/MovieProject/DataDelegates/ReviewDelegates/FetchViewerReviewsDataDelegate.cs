@@ -19,6 +19,13 @@ namespace MovieProject.DataDelegates.ReviewDelegates
             this.viewerId = viewerId;
         }
 
+        public override void PrepareCommand(SqlCommand command)
+        {
+            base.PrepareCommand(command);
+
+            command.Parameters.AddWithValue("ViewerId", viewerId);
+        }
+
         public override IReadOnlyList<Review> Translate(SqlCommand command, IDataRowReader reader)
         {
             var reviews = new List<Review>();

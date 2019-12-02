@@ -138,28 +138,31 @@ namespace _560GUI
 
         private void movieListbox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            showtimeListBox.Items.Clear();
             //whatever movie is selected will print out the showtimes in the other listbox
             int i = 0;
             int index = movieListbox.SelectedIndex;
             string movieName = movieListbox.SelectedItem.ToString();
             IReadOnlyList<Movie> m = movieRepo.RetrieveMovies();
-            Movie selectedMovie;
+            Movie selectedMovie = null;
             foreach(Movie movie in m)
             {
                 if (movie.Name.Equals(movieName))
                 {
                     selectedMovie = movie;
+                    break;
                 }
             }
-            /*
-            IReadOnlyList<ShowTime> showtimes= showtimeRepo.re(1);
+            
+            IReadOnlyList<ShowTime> showtimes= showtimeRepo.RetrieveMovieShowTime(selectedMovie.MovieId);
 
             //showtimerepo.retrievemovieshowtime
-            while (i < 0)
+            while (i < 3)
             {
-                showtimeListBox.Items.Add(selectedMovie.);
+                showtimeListBox.Items.Add(showtimes[i]);
+                i++;
             }
-            */
+            
         }
 
         public string getCurrentUserLabel()

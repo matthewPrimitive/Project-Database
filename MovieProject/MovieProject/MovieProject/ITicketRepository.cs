@@ -53,6 +53,6 @@ namespace MovieProject
         /// <returns>
         /// The resulting instance of <see cref="Person"/>.
         /// </returns>
-        Ticket CreateTicket(int viewerId, int showTimeId, string purchasedOn);
+        Ticket CreateTicket(int viewerId, int showTimeId);
     }
 }

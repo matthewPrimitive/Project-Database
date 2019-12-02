@@ -26,5 +26,10 @@ namespace MovieProject.Models
             Date = date;
             Price = price;
         }
+
+        public override string ToString()
+        {
+            return Time.ToString() + " " + Date.ToString() + " " + Price.ToString();
+        }
     }
 }

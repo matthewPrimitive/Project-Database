@@ -29,19 +29,19 @@ namespace MovieProject
             return executor.ExecuteReader(d);
         }
 
-        public ShowTime RetrieveMovieShowTime(int movieId)
+        public IReadOnlyList<ShowTime> RetrieveMovieShowTime(int movieId)
         {
             var d = new RetrieveMovieShowTimeDataDelegate(movieId);
             return executor.ExecuteReader(d);
         }
 
-        public ShowTime RetrieveTimeShowTime(string time)
+        public IReadOnlyList<ShowTime> RetrieveTimeShowTime(string time)
         {
             var d = new RetrieveTimeShowTimeDataDelegate(time);
             return executor.ExecuteReader(d);
         }
 
-        public ShowTime RetrieveDateShowTime(string date)
+        public IReadOnlyList<ShowTime> RetrieveDateShowTime(string date)
         {
             var d = new RetrieveDateShowTimeDataDelegate(date);
             return executor.ExecuteReader(d);

@@ -11,7 +11,7 @@ namespace MovieProject.DataDelegates.ShowTimeDelegates
 {
     public class RetrieveMovieShowTimeDataDelegate : DataReaderDelegate<IReadOnlyList<ShowTime>>
     {
-        private readonly int movieId;
+        public readonly int movieId;
 
         public RetrieveMovieShowTimeDataDelegate(int movieId)
             : base("Project.RetrieveMovieShowTime")
@@ -19,15 +19,23 @@ namespace MovieProject.DataDelegates.ShowTimeDelegates
             this.movieId = movieId;
         }
 
+        public override void PrepareCommand(SqlCommand command)
+        {
+            base.PrepareCommand(command);
+
+            command.Parameters.AddWithValue("MovieId", movieId);
+        }
+
         public override IReadOnlyList<ShowTime> Translate(SqlCommand command, IDataRowReader reader)
         {
             var showtimes = new List<ShowTime>();
+            
 
             while (reader.Read())
             {
                 showtimes.Add(new ShowTime(
                     reader.GetInt32("ShowTimeId"),
-                    movieId,
+                    reader.GetInt32("MovieId"),
                     reader.GetString("Time"),
                     reader.GetString("Date"),
                     reader.GetDecimal("Price")));
