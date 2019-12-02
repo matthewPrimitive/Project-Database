@@ -34,5 +34,7 @@ namespace MovieProject
         /// If one is not found, <c>null</c> is returned.
         /// </returns>
         Actor FetchActorOnName(string name);
+
+        IReadOnlyList<Actor> FetchActorOnMovie(int movieId);
     }
 }

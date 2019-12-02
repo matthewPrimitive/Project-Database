@@ -298,3 +298,14 @@ SELECT A.ActorId, A.[Name]
 FROM Project.Actor A
 WHERE A.[Name] = @Name;
 GO
+
+CREATE OR ALTER PROCEDURE Project.FetchActorOnMovie
+	@MovieId INT
+AS
+SELECT A.ActorId, A.[Name]
+FROM Project.Actor A
+	INNER JOIN Project.MovieActor MA ON MA.ActorId = A.ActorId
+	INNER JOIN Project.Movie M ON M.MovieId = MA.MovieId
+WHERE M.MovieId = @MovieId
+GO
+

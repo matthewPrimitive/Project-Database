@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cast.Designer.cs">
+      <DependentUpon>Cast.cs</DependentUpon>
+    </Compile>
     <Compile Include="createAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="BestTimeForm.resx">
       <DependentUpon>BestTimeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cast.resx">
+      <DependentUpon>Cast.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="createAccount.resx">
       <DependentUpon>createAccount.cs</DependentUpon>

@@ -88,5 +88,20 @@ namespace _560GUI
             }
             
         }
+
+        private void castButton_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                int ind = listBox1.SelectedIndex;
+                string n = listBox1.SelectedItem.ToString();
+                var c = new Cast(n, ind);
+                c.Show();
+            }
+            else
+            {
+                MessageBox.Show("Select a movie to see it's reviews");
+            }
+        }
     }
 }
