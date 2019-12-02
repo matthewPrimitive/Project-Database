@@ -123,23 +123,28 @@ namespace _560GUI
         
         private void buyButton_Click(object sender, EventArgs e)
         {
-            
-            if(movieListbox.SelectedItem != null && showtimeListBox != null)
+            if (theUser != null)
             {
-                string movie = movieListbox.SelectedItem.ToString();
-                string full = showtimeListBox.SelectedItem.ToString();
-                //string time = 
+                if (movieListbox.SelectedItem != null && showtimeListBox != null)
+                {
+                    string movie = movieListbox.SelectedItem.ToString();
+                    string full = showtimeListBox.SelectedItem.ToString();
+                    //string time = 
 
 
-                string ticketMessage = "Ticket for " + movieListbox.SelectedItem.ToString() + " purchased!\n Thank you for your order!";
+                    string ticketMessage = "Ticket for " + movieListbox.SelectedItem.ToString() + " purchased!\n Thank you for your order!";
 
-                MessageBox.Show(ticketMessage);
+                    MessageBox.Show(ticketMessage);
+                }
+                else
+                {
+                    MessageBox.Show("No movie selected");
+                }
             }
             else
             {
-                MessageBox.Show("No movie selected");
+                MessageBox.Show("You need to be signed in to purchase a ticket.");
             }
-            
         }
 
         private void movieListbox_SelectedIndexChanged(object sender, EventArgs e)
