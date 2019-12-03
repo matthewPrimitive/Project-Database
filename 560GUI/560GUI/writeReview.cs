@@ -63,7 +63,11 @@ namespace _560GUI
                     if(low != -1 && high != 1)
                     {
                         reviewRepo.CreateReview(v.ViewerId, index, rating, theReview);
-                        MessageBox.Show("review written!");
+                        DialogResult d = MessageBox.Show("review written!");
+                        if (d == DialogResult.OK || d == DialogResult.Cancel)
+                        {
+                            this.Close();
+                        }
                     }
                     else
                     {
@@ -81,6 +85,6 @@ namespace _560GUI
                 MessageBox.Show("Must write review and rating for the movie");
             }
             
-        }
+        }       
     }
 }
