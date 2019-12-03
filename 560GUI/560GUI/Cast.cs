@@ -24,6 +24,7 @@ namespace _560GUI
         private ITicketRepository ticketRepo;
         private IViewerRepository viewerRepo;
 
+        MovieList movieList = new MovieList();
         int index = 0;
         string name = "";
 
@@ -42,6 +43,14 @@ namespace _560GUI
             index = ind;
             name = n;
 
+            index = ind;
+            name = movieRepo.FetchMovie(ind).Name;
+
+            IReadOnlyList<Actor> actors = actorRepo.FetchActorOnMovie(ind);
+            foreach (Actor a in actors)
+            {
+                listBox1.Items.Add(a.Name);
+            }
 
         }
     }
