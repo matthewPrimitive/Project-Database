@@ -132,7 +132,7 @@ GO
 CREATE OR ALTER PROCEDURE Project.CreateReview
 	@ViewerId INT,
 	@MovieId INT,
-	@ReviewMessage NVARCHAR,
+	@ReviewMessage NVARCHAR(1024),
 	@Rating DECIMAL(2,1),
 	@ReviewId INT OUTPUT
 AS

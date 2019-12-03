@@ -51,8 +51,8 @@ namespace _560GUI
             }
 
             showtimeDropbox.Items.Add("09:30:00");
-            showtimeDropbox.Items.Add("13:00:00");
-            showtimeDropbox.Items.Add("17:30:00");
+            showtimeDropbox.Items.Add("13:30:00");
+            showtimeDropbox.Items.Add("17:00:00");
             // listCollection.Itmes.Add(databaseMovies) // from the data base add the current movies showing  into the drop list
 
 
@@ -83,12 +83,17 @@ namespace _560GUI
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            // this is just populating the list box with the dumby data for now
-            object selectedInd = dropList.SelectedItem;
-            string movieTitle = selectedInd.ToString();
-            movieListbox.Items.Clear();
-            movieListbox.Items.Add(movieTitle);
-
+            if (dropList.SelectedItem != null)
+            {
+                object selectedInd = dropList.SelectedItem;
+                string movieTitle = selectedInd.ToString();
+                movieListbox.Items.Clear();
+                movieListbox.Items.Add(movieTitle);
+            }
+            else
+            {
+                MessageBox.Show("No movie selected");
+            }
             //this will populate the listbox with the movie database information for the specific movie
             
         }
@@ -156,41 +161,46 @@ namespace _560GUI
         {
             if (theUser != null)
             {
-                if (movieListbox.SelectedItem != null && showtimeListBox != null)
-                {
-                    string movie = movieListbox.SelectedItem.ToString();
-                    string full = showtimeListBox.SelectedItem.ToString();
-                    string[] array = full.Split(' ');
-                    string time = array[0];
-                    string date = array[14];
-                    string price = array[27];
-
-                    IReadOnlyList<Movie> m = movieRepo.RetrieveMovie(movie);
-                    IReadOnlyList<ShowTime> s = showtimeRepo.RetrieveMovieShowTime(m[0].MovieId);
-
-                    ShowTime current = null;
-                    foreach (ShowTime show in s)
+                if (showtimeListBox.SelectedItem != null) { 
+                    if (movieListbox.SelectedItem != null)
                     {
-                        if (show.Date == date && show.Time == time)
+                        string movie = movieListbox.SelectedItem.ToString();
+                        string full = showtimeListBox.SelectedItem.ToString();
+                        string[] array = full.Split(' ');
+                        string time = array[0];
+                        string date = array[14];
+                        string price = array[27];
+
+                        IReadOnlyList<Movie> m = movieRepo.RetrieveMovie(movie);
+                        IReadOnlyList<ShowTime> s = showtimeRepo.RetrieveMovieShowTime(m[0].MovieId);
+
+                        ShowTime current = null;
+                        foreach (ShowTime show in s)
                         {
-                            current = show;
-                            break;
+                            if (show.Date == date && show.Time == time)
+                            {
+                                current = show;
+                                break;
+                            }
                         }
+
+                        Viewer v = viewerRepo.RetrieveViewerOnEmail(theUser.userName);
+
+                        Ticket newTicket = ticketRepo.CreateTicket(v.ViewerId, current.ShowTimeId);
+
+                        string ticketMessage = "Ticket for " + movie + " purchased!\n Thank you for your order!";
+
+                        MessageBox.Show(ticketMessage);
                     }
-
-                    Viewer v = viewerRepo.RetrieveViewerOnEmail(theUser.userName);
-
-                    Ticket newTicket = ticketRepo.CreateTicket(v.ViewerId, current.ShowTimeId);
-
-                    string ticketMessage = "Ticket for " + movie + " purchased!\n Thank you for your order!";
-
-                    MessageBox.Show(ticketMessage);
+                    else
+                    {
+                        MessageBox.Show("No movie selected");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("No movie selected");
+                    MessageBox.Show("No Time selected");
                 }
-               
             }
             else
             {
