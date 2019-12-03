@@ -95,7 +95,7 @@ namespace _560GUI
             {
                 int ind = listBox1.SelectedIndex;
                 string n = listBox1.SelectedItem.ToString();
-                var c = new Cast(n, ind);
+                var c = new Cast(n, ind + 1);
                 c.Show();
             }
             else
