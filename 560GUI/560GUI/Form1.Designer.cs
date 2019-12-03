@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.searchButton = new System.Windows.Forms.Button();
-            this.dropList = new System.Windows.Forms.ComboBox();
             this.showtimeDropbox = new System.Windows.Forms.ComboBox();
             this.showtimeSearch = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movieDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bestTimesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.highestRatedActorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bestReviewedMoviesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.highestRatedMoviesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginButton = new System.Windows.Forms.Button();
             this.currentUserLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,31 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.ux_BestTimeButton = new System.Windows.Forms.Button();
-            this.ux_HighestRatedActors = new System.Windows.Forms.Button();
-            this.ux_MostViewedMovies = new System.Windows.Forms.Button();
-            this.ux_RatingOverTime = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // searchButton
-            // 
-            this.searchButton.Location = new System.Drawing.Point(35, 148);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(117, 23);
-            this.searchButton.TabIndex = 1;
-            this.searchButton.Text = "Search";
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
-            // 
-            // dropList
-            // 
-            this.dropList.FormattingEnabled = true;
-            this.dropList.Location = new System.Drawing.Point(35, 121);
-            this.dropList.Name = "dropList";
-            this.dropList.Size = new System.Drawing.Size(208, 21);
-            this.dropList.TabIndex = 2;
-            this.dropList.SelectedIndexChanged += new System.EventHandler(this.dropList_SelectedIndexChanged);
             // 
             // showtimeDropbox
             // 
@@ -101,7 +80,11 @@
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.movieDatabaseToolStripMenuItem});
+            this.movieDatabaseToolStripMenuItem,
+            this.bestTimesToolStripMenuItem,
+            this.highestRatedActorsToolStripMenuItem,
+            this.bestReviewedMoviesToolStripMenuItem,
+            this.highestRatedMoviesToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
@@ -109,9 +92,37 @@
             // movieDatabaseToolStripMenuItem
             // 
             this.movieDatabaseToolStripMenuItem.Name = "movieDatabaseToolStripMenuItem";
-            this.movieDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.movieDatabaseToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.movieDatabaseToolStripMenuItem.Text = "Movie Database";
             this.movieDatabaseToolStripMenuItem.Click += new System.EventHandler(this.movieDatabaseToolStripMenuItem_Click);
+            // 
+            // bestTimesToolStripMenuItem
+            // 
+            this.bestTimesToolStripMenuItem.Name = "bestTimesToolStripMenuItem";
+            this.bestTimesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.bestTimesToolStripMenuItem.Text = "Best Times";
+            this.bestTimesToolStripMenuItem.Click += new System.EventHandler(this.bestTimesToolStripMenuItem_Click);
+            // 
+            // highestRatedActorsToolStripMenuItem
+            // 
+            this.highestRatedActorsToolStripMenuItem.Name = "highestRatedActorsToolStripMenuItem";
+            this.highestRatedActorsToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.highestRatedActorsToolStripMenuItem.Text = "Highest Rated Actors";
+            this.highestRatedActorsToolStripMenuItem.Click += new System.EventHandler(this.highestRatedActorsToolStripMenuItem_Click);
+            // 
+            // bestReviewedMoviesToolStripMenuItem
+            // 
+            this.bestReviewedMoviesToolStripMenuItem.Name = "bestReviewedMoviesToolStripMenuItem";
+            this.bestReviewedMoviesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.bestReviewedMoviesToolStripMenuItem.Text = "Most Viewed Movies";
+            this.bestReviewedMoviesToolStripMenuItem.Click += new System.EventHandler(this.bestReviewedMoviesToolStripMenuItem_Click);
+            // 
+            // highestRatedMoviesToolStripMenuItem
+            // 
+            this.highestRatedMoviesToolStripMenuItem.Name = "highestRatedMoviesToolStripMenuItem";
+            this.highestRatedMoviesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.highestRatedMoviesToolStripMenuItem.Text = "Highest Rated Movies";
+            this.highestRatedMoviesToolStripMenuItem.Click += new System.EventHandler(this.highestRatedMoviesToolStripMenuItem_Click);
             // 
             // loginButton
             // 
@@ -198,55 +209,11 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Price";
             // 
-            // ux_BestTimeButton
-            // 
-            this.ux_BestTimeButton.Location = new System.Drawing.Point(35, 27);
-            this.ux_BestTimeButton.Name = "ux_BestTimeButton";
-            this.ux_BestTimeButton.Size = new System.Drawing.Size(122, 23);
-            this.ux_BestTimeButton.TabIndex = 16;
-            this.ux_BestTimeButton.Text = "Best Times";
-            this.ux_BestTimeButton.UseVisualStyleBackColor = true;
-            this.ux_BestTimeButton.Click += new System.EventHandler(this.ux_BestTimeButton_Click);
-            // 
-            // ux_HighestRatedActors
-            // 
-            this.ux_HighestRatedActors.Location = new System.Drawing.Point(35, 51);
-            this.ux_HighestRatedActors.Name = "ux_HighestRatedActors";
-            this.ux_HighestRatedActors.Size = new System.Drawing.Size(122, 23);
-            this.ux_HighestRatedActors.TabIndex = 17;
-            this.ux_HighestRatedActors.Text = "Highest Rated Actors";
-            this.ux_HighestRatedActors.UseVisualStyleBackColor = true;
-            this.ux_HighestRatedActors.Click += new System.EventHandler(this.ux_HighestRatedActors_Click);
-            // 
-            // ux_MostViewedMovies
-            // 
-            this.ux_MostViewedMovies.Location = new System.Drawing.Point(35, 74);
-            this.ux_MostViewedMovies.Name = "ux_MostViewedMovies";
-            this.ux_MostViewedMovies.Size = new System.Drawing.Size(122, 23);
-            this.ux_MostViewedMovies.TabIndex = 18;
-            this.ux_MostViewedMovies.Text = "Most Viewed Movies";
-            this.ux_MostViewedMovies.UseVisualStyleBackColor = true;
-            this.ux_MostViewedMovies.Click += new System.EventHandler(this.ux_MostViewedMovies_Click);
-            // 
-            // ux_RatingOverTime
-            // 
-            this.ux_RatingOverTime.Location = new System.Drawing.Point(35, 97);
-            this.ux_RatingOverTime.Name = "ux_RatingOverTime";
-            this.ux_RatingOverTime.Size = new System.Drawing.Size(122, 23);
-            this.ux_RatingOverTime.TabIndex = 19;
-            this.ux_RatingOverTime.Text = "Highest Rated Movies";
-            this.ux_RatingOverTime.UseVisualStyleBackColor = true;
-            this.ux_RatingOverTime.Click += new System.EventHandler(this.ux_RatingOverTime_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 412);
-            this.Controls.Add(this.ux_RatingOverTime);
-            this.Controls.Add(this.ux_MostViewedMovies);
-            this.Controls.Add(this.ux_HighestRatedActors);
-            this.Controls.Add(this.ux_BestTimeButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -258,8 +225,6 @@
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.showtimeSearch);
             this.Controls.Add(this.showtimeDropbox);
-            this.Controls.Add(this.dropList);
-            this.Controls.Add(this.searchButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -273,8 +238,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.ComboBox dropList;
         private System.Windows.Forms.ComboBox showtimeDropbox;
         private System.Windows.Forms.Button showtimeSearch;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -288,11 +251,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button ux_BestTimeButton;
-        private System.Windows.Forms.Button ux_HighestRatedActors;
-        private System.Windows.Forms.Button ux_MostViewedMovies;
-        private System.Windows.Forms.Button ux_RatingOverTime;
         public System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.ToolStripMenuItem bestTimesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem highestRatedActorsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bestReviewedMoviesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem highestRatedMoviesToolStripMenuItem;
     }
 }
 

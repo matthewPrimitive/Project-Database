@@ -45,6 +45,7 @@ namespace _560GUI
 
             index = ind;
             name = movieRepo.FetchMovie(ind).Name;
+            label1.Text = name;
 
             IReadOnlyList<Actor> actors = actorRepo.FetchActorOnMovie(ind);
             foreach (Actor a in actors)

@@ -45,10 +45,7 @@ namespace _560GUI
             
             IReadOnlyList<Movie> m = movieRepo.RetrieveMovies();
 
-            foreach (Movie movie in m)
-            {
-                dropList.Items.Add(movie.Name);
-            }
+            
 
             showtimeDropbox.Items.Add("09:30:00");
             showtimeDropbox.Items.Add("13:30:00");
@@ -81,22 +78,7 @@ namespace _560GUI
             //empty
         }
 
-        private void searchButton_Click(object sender, EventArgs e)
-        {
-            if (dropList.SelectedItem != null)
-            {
-                object selectedInd = dropList.SelectedItem;
-                string movieTitle = selectedInd.ToString();
-                movieListbox.Items.Clear();
-                movieListbox.Items.Add(movieTitle);
-            }
-            else
-            {
-                MessageBox.Show("No movie selected");
-            }
-            //this will populate the listbox with the movie database information for the specific movie
-            
-        }
+        
 
         private void showtimeSearch_Click(object sender, EventArgs e)
         {
@@ -243,25 +225,27 @@ namespace _560GUI
             return currentUserLabel.Text;
         }
 
-        private void ux_BestTimeButton_Click(object sender, EventArgs e)
+        
+
+        private void bestTimesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var btf = new BestTimeForm(connectionString);
             btf.Show();
         }
 
-        private void ux_HighestRatedActors_Click(object sender, EventArgs e)
+        private void highestRatedActorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var hraf = new HighestRatedActorForm(connectionString);
             hraf.Show();
         }
 
-        private void ux_MostViewedMovies_Click(object sender, EventArgs e)
+        private void bestReviewedMoviesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var mvmf = new MostViewedMovieForm(connectionString);
             mvmf.Show();
         }
 
-        private void ux_RatingOverTime_Click(object sender, EventArgs e)
+        private void highestRatedMoviesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var hrmf = new HighestRatedMovieForm(connectionString);
             hrmf.Show();

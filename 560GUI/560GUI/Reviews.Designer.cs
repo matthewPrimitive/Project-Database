@@ -47,7 +47,7 @@
             // rUserLabel
             // 
             this.rUserLabel.AutoSize = true;
-            this.rUserLabel.Location = new System.Drawing.Point(724, 9);
+            this.rUserLabel.Location = new System.Drawing.Point(674, 9);
             this.rUserLabel.Name = "rUserLabel";
             this.rUserLabel.Size = new System.Drawing.Size(69, 13);
             this.rUserLabel.TabIndex = 1;

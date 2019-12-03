@@ -51,6 +51,7 @@ namespace _560GUI
             {
                 listBox1.Items.Add(r.ToString());
             }
+            movieNameLabel.Text = movieName;
             
         }
 
