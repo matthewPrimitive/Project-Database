@@ -79,7 +79,7 @@ namespace _560GUI
             if (listBox1.SelectedItem != null)
             {
                 int ind = listBox1.SelectedIndex;
-                var r = new Reviews(this , ind);
+                var r = new Reviews(this , ind+1);
                 r.Show();
             }
             else

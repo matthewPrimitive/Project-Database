@@ -69,6 +69,11 @@ namespace _560GUI
             return movieName;
         }
 
+        public int getMovieId()
+        {
+            return index;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if(cu != null)

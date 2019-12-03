@@ -34,9 +34,7 @@
             this.showtimeSearch = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.currentShowingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movieDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.writeAReviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginButton = new System.Windows.Forms.Button();
             this.currentUserLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -103,31 +101,17 @@
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.currentShowingToolStripMenuItem,
-            this.movieDatabaseToolStripMenuItem,
-            this.writeAReviewToolStripMenuItem});
+            this.movieDatabaseToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
-            // currentShowingToolStripMenuItem
-            // 
-            this.currentShowingToolStripMenuItem.Name = "currentShowingToolStripMenuItem";
-            this.currentShowingToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.currentShowingToolStripMenuItem.Text = "Curent Showings";
-            // 
             // movieDatabaseToolStripMenuItem
             // 
             this.movieDatabaseToolStripMenuItem.Name = "movieDatabaseToolStripMenuItem";
-            this.movieDatabaseToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.movieDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.movieDatabaseToolStripMenuItem.Text = "Movie Database";
             this.movieDatabaseToolStripMenuItem.Click += new System.EventHandler(this.movieDatabaseToolStripMenuItem_Click);
-            // 
-            // writeAReviewToolStripMenuItem
-            // 
-            this.writeAReviewToolStripMenuItem.Name = "writeAReviewToolStripMenuItem";
-            this.writeAReviewToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.writeAReviewToolStripMenuItem.Text = "Write a Review";
             // 
             // loginButton
             // 
@@ -295,9 +279,7 @@
         private System.Windows.Forms.Button showtimeSearch;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem currentShowingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem movieDatabaseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem writeAReviewToolStripMenuItem;
         private System.Windows.Forms.Label currentUserLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buyButton;
