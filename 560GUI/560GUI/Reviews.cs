@@ -79,11 +79,23 @@ namespace _560GUI
             if(cu != null)
             {
                 var wr = new writeReview(this);
+                wr.FormClosed += new FormClosedEventHandler(this.writeReview_FormClosed);
                 wr.Show();
+               
             }
             else
             {
                 MessageBox.Show("Must be signed in to write review");
+            }
+        }
+
+        private void writeReview_FormClosed(Object sender, FormClosedEventArgs e)
+        {
+            listBox1.Items.Clear();
+            IReadOnlyList<Review> reviews = reviewRepo.FetchMovieReviews(index);
+            foreach (Review r in reviews)
+            {
+                listBox1.Items.Add(r.ToString());
             }
         }
     }
