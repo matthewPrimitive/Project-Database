@@ -18,7 +18,7 @@ namespace _560GUI
     {
         Form1 mainForm = new Form1();
 
-        const string connectionString = @"Data Source=mssql.cs.ksu.edu;Initial Catalog=jamesmmatt;User Id=jamesmmatt;Password=Oscarpatatoe14;";
+        const string connectionString = @"Data Source=mssql.cs.ksu.edu;Initial Catalog=jamesmmatt;User Id=jamesmmatt;Password=Choppers7;";
 
         private IActorRepository actorRepo;
         private IMovieRepository movieRepo;
